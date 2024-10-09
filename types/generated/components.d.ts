@@ -62,6 +62,20 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_heroes';
+  info: {
+    displayName: 'Hero';
+    icon: 'alien';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +84,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
+      'shared.hero': SharedHero;
     }
   }
 }
