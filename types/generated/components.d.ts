@@ -5,8 +5,11 @@ export interface SharedText extends Struct.ComponentSchema {
   info: {
     displayName: 'Text';
     icon: 'alien';
+    description: '';
   };
-  attributes: {};
+  attributes: {
+    Feature: Schema.Attribute.String;
+  };
 }
 
 export interface SharedSubscribeSection extends Struct.ComponentSchema {

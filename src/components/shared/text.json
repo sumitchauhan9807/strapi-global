@@ -2,8 +2,13 @@
   "collectionName": "components_shared_texts",
   "info": {
     "displayName": "Text",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "Feature": {
+      "type": "string"
+    }
+  }
 }
