@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_repatable_texts",
+  "info": {
+    "displayName": "RepatableTexts",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

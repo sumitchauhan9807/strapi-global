@@ -498,9 +498,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
   attributes: {
     title: Schema.Attribute.String;
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
+    blocks: Schema.Attribute.DynamicZone<[]>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -534,9 +532,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
+    blocks: Schema.Attribute.DynamicZone<[]>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -645,6 +641,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     singularName: 'home';
     pluralName: 'homes';
     displayName: 'Home';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -655,7 +652,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    des: Schema.Attribute.Blocks &
+    Hero: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

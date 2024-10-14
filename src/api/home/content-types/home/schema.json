@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home",
     "pluralName": "homes",
-    "displayName": "Home"
+    "displayName": "Home",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,13 +16,16 @@
     }
   },
   "attributes": {
-    "des": {
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "blocks"
+      "component": "shared.hero"
     }
   }
 }

@@ -2,19 +2,30 @@
   "collectionName": "components_shared_heroes",
   "info": {
     "displayName": "Hero",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "image": {
+    "HeroText": {
+      "displayName": "RepatableTexts",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repatable-texts"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "SubText": {
+      "type": "text"
     }
   }
 }
