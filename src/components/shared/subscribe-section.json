@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_subscribe_sections",
+  "info": {
+    "displayName": "SubscribeSection"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubText": {
+      "type": "text"
+    },
+    "FootText": {
+      "type": "text"
+    }
+  }
+}

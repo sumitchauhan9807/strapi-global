@@ -37,6 +37,50 @@
         }
       },
       "component": "shared.home-section1"
+    },
+    "HomeSection2": {
+      "displayName": "HomeSection2",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.home-section2"
+    },
+    "SubscribeSection": {
+      "displayName": "SubscribeSection",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.subscribe-section"
+    },
+    "Pricing": {
+      "displayName": "Pricing",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.pricing"
+    },
+    "HomeSection3": {
+      "displayName": "HomeSection3",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.home-section3"
     }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_plans",
+  "info": {
+    "displayName": "Plans",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_pricings",
+  "info": {
+    "displayName": "Pricing",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubText": {
+      "type": "text"
+    },
+    "Plans": {
+      "displayName": "Plans",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.plans"
+    }
+  }
+}

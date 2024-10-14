@@ -9,6 +9,18 @@ export interface SharedText extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface SharedSubscribeSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_subscribe_sections';
+  info: {
+    displayName: 'SubscribeSection';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubText: Schema.Attribute.Text;
+    FootText: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -45,6 +57,59 @@ export interface SharedRepatableTexts extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedPricing extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricings';
+  info: {
+    displayName: 'Pricing';
+    icon: 'monitor';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubText: Schema.Attribute.Text;
+    Plans: Schema.Attribute.Component<'shared.plans', true>;
+  };
+}
+
+export interface SharedPlans extends Struct.ComponentSchema {
+  collectionName: 'components_shared_plans';
+  info: {
+    displayName: 'Plans';
+    icon: 'briefcase';
+  };
+  attributes: {
+    Name: Schema.Attribute.String;
+    Price: Schema.Attribute.Decimal;
+    Features: Schema.Attribute.Component<'shared.text', true>;
+  };
+}
+
+export interface SharedHomeSection3 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_section3s';
+  info: {
+    displayName: 'HomeSection3';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubText: Schema.Attribute.Text;
+    Lists: Schema.Attribute.Component<'shared.repetable-lists', true>;
+  };
+}
+
+export interface SharedHomeSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_section2s';
+  info: {
+    displayName: 'HomeSection2';
+    icon: 'folder';
+    description: '';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    Subtext: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Lists: Schema.Attribute.Component<'shared.repetable-lists', true>;
   };
 }
 
@@ -87,9 +152,14 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.text': SharedText;
+      'shared.subscribe-section': SharedSubscribeSection;
       'shared.seo': SharedSeo;
       'shared.repetable-lists': SharedRepetableLists;
       'shared.repatable-texts': SharedRepatableTexts;
+      'shared.pricing': SharedPricing;
+      'shared.plans': SharedPlans;
+      'shared.home-section3': SharedHomeSection3;
+      'shared.home-section2': SharedHomeSection2;
       'shared.home-section1': SharedHomeSection1;
       'shared.hero': SharedHero;
     }
