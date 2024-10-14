@@ -26,6 +26,9 @@
     },
     "SubText": {
       "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
     }
   }
 }

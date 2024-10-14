@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_subscribe_sections",
   "info": {
-    "displayName": "SubscribeSection"
+    "displayName": "SubscribeSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,6 +14,9 @@
     },
     "FootText": {
       "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
     }
   }
 }

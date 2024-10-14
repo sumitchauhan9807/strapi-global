@@ -16,11 +16,13 @@ export interface SharedSubscribeSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_subscribe_sections';
   info: {
     displayName: 'SubscribeSection';
+    description: '';
   };
   attributes: {
     Heading: Schema.Attribute.String;
     SubText: Schema.Attribute.Text;
     FootText: Schema.Attribute.Text;
+    ButtonText: Schema.Attribute.String;
   };
 }
 
@@ -93,11 +95,13 @@ export interface SharedHomeSection3 extends Struct.ComponentSchema {
   collectionName: 'components_shared_home_section3s';
   info: {
     displayName: 'HomeSection3';
+    description: '';
   };
   attributes: {
     Heading: Schema.Attribute.String;
     SubText: Schema.Attribute.Text;
     Lists: Schema.Attribute.Component<'shared.repetable-lists', true>;
+    ButtonText: Schema.Attribute.String;
   };
 }
 
@@ -113,6 +117,7 @@ export interface SharedHomeSection2 extends Struct.ComponentSchema {
     Subtext: Schema.Attribute.Text;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Lists: Schema.Attribute.Component<'shared.repetable-lists', true>;
+    Buttontext: Schema.Attribute.String;
   };
 }
 
@@ -148,6 +153,7 @@ export interface SharedHero extends Struct.ComponentSchema {
       true
     >;
     SubText: Schema.Attribute.Text;
+    ButtonText: Schema.Attribute.String;
   };
 }
 
