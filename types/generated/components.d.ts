@@ -24,6 +24,18 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRepetableLists extends Struct.ComponentSchema {
+  collectionName: 'components_shared_repetable_lists';
+  info: {
+    displayName: 'RepetableLists';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedRepatableTexts extends Struct.ComponentSchema {
   collectionName: 'components_shared_repatable_texts';
   info: {
@@ -33,6 +45,24 @@ export interface SharedRepatableTexts extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedHomeSection1 extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_section1s';
+  info: {
+    displayName: 'HomeSection1';
+    icon: 'brush';
+    description: '';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+    Images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Lists: Schema.Attribute.Component<'shared.repetable-lists', true>;
   };
 }
 
@@ -58,7 +88,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.text': SharedText;
       'shared.seo': SharedSeo;
+      'shared.repetable-lists': SharedRepetableLists;
       'shared.repatable-texts': SharedRepatableTexts;
+      'shared.home-section1': SharedHomeSection1;
       'shared.hero': SharedHero;
     }
   }

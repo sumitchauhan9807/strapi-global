@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_repetable_lists",
+  "info": {
+    "displayName": "RepetableLists",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_home_section1s",
+  "info": {
+    "displayName": "HomeSection1",
+    "icon": "brush",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Lists": {
+      "displayName": "RepetableLists",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repetable-lists"
+    }
+  }
+}

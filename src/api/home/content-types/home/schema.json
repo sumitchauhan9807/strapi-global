@@ -26,6 +26,17 @@
         }
       },
       "component": "shared.hero"
+    },
+    "HomeSection1": {
+      "displayName": "HomeSection1",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.home-section1"
     }
   }
 }
