@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_product_specs",
+  "info": {
+    "displayName": "ProductSpecs",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repetable-lists"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

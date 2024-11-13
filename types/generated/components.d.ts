@@ -65,6 +65,35 @@ export interface SharedRepatableTexts extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedProductSpecs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_product_specs';
+  info: {
+    displayName: 'ProductSpecs';
+    icon: 'attachment';
+    description: '';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+    ProductSpecs: Schema.Attribute.Component<'shared.repetable-lists', true>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedProductDescription extends Struct.ComponentSchema {
+  collectionName: 'components_shared_product_descriptions';
+  info: {
+    displayName: 'Product Description';
+    icon: 'bold';
+  };
+  attributes: {
+    ProductName: Schema.Attribute.String;
+    ProductDescription: Schema.Attribute.String;
+    ProductSpecs: Schema.Attribute.Component<'shared.repatable-texts', true>;
+    ProductPrice: Schema.Attribute.String;
+  };
+}
+
 export interface SharedPricing extends Struct.ComponentSchema {
   collectionName: 'components_shared_pricings';
   info: {
@@ -157,6 +186,21 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedDeployingSteps extends Struct.ComponentSchema {
+  collectionName: 'components_shared_deploying_steps';
+  info: {
+    displayName: 'DeployingSteps';
+    icon: 'emotionUnhappy';
+    description: '';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+    Steps: Schema.Attribute.Component<'shared.repetable-lists', true>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -165,12 +209,15 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.repetable-lists': SharedRepetableLists;
       'shared.repatable-texts': SharedRepatableTexts;
+      'shared.product-specs': SharedProductSpecs;
+      'shared.product-description': SharedProductDescription;
       'shared.pricing': SharedPricing;
       'shared.plans': SharedPlans;
       'shared.home-section3': SharedHomeSection3;
       'shared.home-section2': SharedHomeSection2;
       'shared.home-section1': SharedHomeSection1;
       'shared.hero': SharedHero;
+      'shared.deploying-steps': SharedDeployingSteps;
     }
   }
 }

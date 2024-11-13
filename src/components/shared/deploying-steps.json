@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_deploying_steps",
+  "info": {
+    "displayName": "DeployingSteps",
+    "icon": "emotionUnhappy",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repetable-lists"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

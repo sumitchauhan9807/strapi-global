@@ -703,6 +703,40 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPhoneNumberPhoneNumber extends Struct.SingleTypeSchema {
+  collectionName: 'phone_numbers';
+  info: {
+    singularName: 'phone-number';
+    pluralName: 'phone-numbers';
+    displayName: 'Phone Number';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::phone-number.phone-number'
+    >;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -1116,6 +1150,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::phone-number.phone-number': ApiPhoneNumberPhoneNumber;
       'api::product.product': ApiProductProduct;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;

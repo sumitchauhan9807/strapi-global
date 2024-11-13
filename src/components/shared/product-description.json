@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_product_descriptions",
+  "info": {
+    "displayName": "Product Description",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "ProductName": {
+      "type": "string"
+    },
+    "ProductDescription": {
+      "type": "string"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repatable-texts"
+    },
+    "ProductPrice": {
+      "type": "string"
+    }
+  }
+}
