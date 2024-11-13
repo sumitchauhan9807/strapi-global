@@ -607,6 +607,35 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    WorkingHours: Schema.Attribute.Component<'shared.repetable-lists', true>;
+    ContactUs: Schema.Attribute.Component<'shared.repetable-lists', true>;
+    Location1: Schema.Attribute.RichText;
+    Location2: Schema.Attribute.RichText;
+    Location3: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -765,6 +794,39 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
+    >;
+  };
+}
+
+export interface ApiSipTrunkSipTrunk extends Struct.SingleTypeSchema {
+  collectionName: 'sip_trunks';
+  info: {
+    singularName: 'sip-trunk';
+    pluralName: 'sip-trunks';
+    displayName: 'SIP Trunk';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sip-trunk.sip-trunk'
     >;
   };
 }
@@ -1148,10 +1210,12 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::phone-number.phone-number': ApiPhoneNumberPhoneNumber;
       'api::product.product': ApiProductProduct;
+      'api::sip-trunk.sip-trunk': ApiSipTrunkSipTrunk;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
