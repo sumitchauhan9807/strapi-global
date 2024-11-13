@@ -2,7 +2,8 @@
   "collectionName": "components_shared_numbers",
   "info": {
     "displayName": "Number",
-    "icon": "cup"
+    "icon": "cup",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,8 +16,15 @@
     "LeftSpacing": {
       "type": "enumeration",
       "enum": [
-        "a:1",
-        "b:2"
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8"
       ]
     }
   }

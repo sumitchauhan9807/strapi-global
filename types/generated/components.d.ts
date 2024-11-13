@@ -127,11 +127,14 @@ export interface SharedNumber extends Struct.ComponentSchema {
   info: {
     displayName: 'Number';
     icon: 'cup';
+    description: '';
   };
   attributes: {
     Place: Schema.Attribute.String;
     Number: Schema.Attribute.String;
-    LeftSpacing: Schema.Attribute.Enumeration<['a:1', 'b:2']>;
+    LeftSpacing: Schema.Attribute.Enumeration<
+      ['s0', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8']
+    >;
   };
 }
 
@@ -140,6 +143,7 @@ export interface SharedMobileNumbers extends Struct.ComponentSchema {
   info: {
     displayName: 'Mobile Numbers';
     icon: 'check';
+    description: '';
   };
   attributes: {
     Number: Schema.Attribute.Component<'shared.number', true>;
