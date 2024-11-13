@@ -17,11 +17,6 @@
       "repeatable": true,
       "component": "shared.repetable-lists"
     },
-    "ContactUs": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.repetable-lists"
-    },
     "Location1": {
       "type": "richtext"
     },
@@ -30,6 +25,11 @@
     },
     "Location3": {
       "type": "richtext"
+    },
+    "MobileNumbers": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.mobile-numbers"
     }
   }
 }

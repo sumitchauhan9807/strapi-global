@@ -122,6 +122,30 @@ export interface SharedPlans extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedNumber extends Struct.ComponentSchema {
+  collectionName: 'components_shared_numbers';
+  info: {
+    displayName: 'Number';
+    icon: 'cup';
+  };
+  attributes: {
+    Place: Schema.Attribute.String;
+    Number: Schema.Attribute.String;
+    LeftSpacing: Schema.Attribute.Enumeration<['a:1', 'b:2']>;
+  };
+}
+
+export interface SharedMobileNumbers extends Struct.ComponentSchema {
+  collectionName: 'components_shared_mobile_numbers';
+  info: {
+    displayName: 'Mobile Numbers';
+    icon: 'check';
+  };
+  attributes: {
+    Number: Schema.Attribute.Component<'shared.number', true>;
+  };
+}
+
 export interface SharedHomeSection3 extends Struct.ComponentSchema {
   collectionName: 'components_shared_home_section3s';
   info: {
@@ -215,6 +239,8 @@ declare module '@strapi/strapi' {
       'shared.product-description': SharedProductDescription;
       'shared.pricing': SharedPricing;
       'shared.plans': SharedPlans;
+      'shared.number': SharedNumber;
+      'shared.mobile-numbers': SharedMobileNumbers;
       'shared.home-section3': SharedHomeSection3;
       'shared.home-section2': SharedHomeSection2;
       'shared.home-section1': SharedHomeSection1;

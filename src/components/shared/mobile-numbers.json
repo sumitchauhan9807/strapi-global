@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_mobile_numbers",
+  "info": {
+    "displayName": "Mobile Numbers",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "Number": {
+      "displayName": "Number",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.number"
+    }
+  }
+}

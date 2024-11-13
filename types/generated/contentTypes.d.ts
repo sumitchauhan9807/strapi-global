@@ -620,10 +620,10 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
   attributes: {
     WorkingHours: Schema.Attribute.Component<'shared.repetable-lists', true>;
-    ContactUs: Schema.Attribute.Component<'shared.repetable-lists', true>;
     Location1: Schema.Attribute.RichText;
     Location2: Schema.Attribute.RichText;
     Location3: Schema.Attribute.RichText;
+    MobileNumbers: Schema.Attribute.Component<'shared.mobile-numbers', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
