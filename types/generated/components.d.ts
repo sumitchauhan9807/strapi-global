@@ -85,12 +85,14 @@ export interface SharedProductDescription extends Struct.ComponentSchema {
   info: {
     displayName: 'Product Description';
     icon: 'bold';
+    description: '';
   };
   attributes: {
     ProductName: Schema.Attribute.String;
     ProductDescription: Schema.Attribute.String;
     ProductSpecs: Schema.Attribute.Component<'shared.repatable-texts', true>;
     ProductPrice: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
