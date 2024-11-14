@@ -624,6 +624,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     Location2: Schema.Attribute.RichText;
     Location3: Schema.Attribute.RichText;
     MobileNumbers: Schema.Attribute.Component<'shared.mobile-numbers', false>;
+    Location4: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
