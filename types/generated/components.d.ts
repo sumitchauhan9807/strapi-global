@@ -1,5 +1,17 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface SharedWhatSolutionDo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_what_solution_dos';
+  info: {
+    displayName: 'What Solution Do';
+    icon: 'collapse';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SolutionDos: Schema.Attribute.Component<'shared.repetable-lists', true>;
+  };
+}
+
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
@@ -23,6 +35,31 @@ export interface SharedSubscribeSection extends Struct.ComponentSchema {
     SubText: Schema.Attribute.Text;
     FootText: Schema.Attribute.Text;
     ButtonText: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSolutionsCta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_solutions_ctas';
+  info: {
+    displayName: 'Solutions CTA';
+    icon: 'cloud';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    Description: Schema.Attribute.RichText;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedSolutionDescription extends Struct.ComponentSchema {
+  collectionName: 'components_shared_solution_descriptions';
+  info: {
+    displayName: 'Solution Description';
+    icon: 'book';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
   };
 }
 
@@ -256,8 +293,11 @@ export interface SharedDeployingSteps extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.what-solution-do': SharedWhatSolutionDo;
       'shared.text': SharedText;
       'shared.subscribe-section': SharedSubscribeSection;
+      'shared.solutions-cta': SharedSolutionsCta;
+      'shared.solution-description': SharedSolutionDescription;
       'shared.seo': SharedSeo;
       'shared.repetable-lists': SharedRepetableLists;
       'shared.repatable-texts': SharedRepatableTexts;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_solution_descriptions",
+  "info": {
+    "displayName": "Solution Description",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    }
+  }
+}

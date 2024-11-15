@@ -1,0 +1,58 @@
+{
+  "kind": "singleType",
+  "collectionName": "solution_phone_numbers",
+  "info": {
+    "singularName": "solution-phone-number",
+    "pluralName": "solution-phone-numbers",
+    "displayName": "Solution Phone Numbers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TopImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SolutionDescription": {
+      "displayName": "Solution Description",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.solution-description"
+    },
+    "SolutionsCTA": {
+      "displayName": "Solutions CTA",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.solutions-cta"
+    },
+    "WhatSolutionDO": {
+      "displayName": "What Solution Do",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.what-solution-do"
+    },
+    "SolutionTip": {
+      "type": "richtext"
+    },
+    "SolutionBenefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repetable-lists"
+    },
+    "HowSolutionWorks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repatable-texts"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_what_solution_dos",
+  "info": {
+    "displayName": "What Solution Do",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SolutionDos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repetable-lists"
+    }
+  }
+}

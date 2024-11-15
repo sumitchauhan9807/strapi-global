@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_solutions_ctas",
+  "info": {
+    "displayName": "Solutions CTA",
+    "icon": "cloud"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

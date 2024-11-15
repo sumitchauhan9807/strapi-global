@@ -926,6 +926,53 @@ export interface ApiSipTrunkSipTrunk extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSolutionPhoneNumberSolutionPhoneNumber
+  extends Struct.SingleTypeSchema {
+  collectionName: 'solution_phone_numbers';
+  info: {
+    singularName: 'solution-phone-number';
+    pluralName: 'solution-phone-numbers';
+    displayName: 'Solution Phone Numbers';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SolutionDescription: Schema.Attribute.Component<
+      'shared.solution-description',
+      false
+    >;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    WhatSolutionDO: Schema.Attribute.Component<
+      'shared.what-solution-do',
+      false
+    >;
+    SolutionTip: Schema.Attribute.RichText;
+    SolutionBenefits: Schema.Attribute.Component<
+      'shared.repetable-lists',
+      true
+    >;
+    HowSolutionWorks: Schema.Attribute.Component<
+      'shared.repatable-texts',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::solution-phone-number.solution-phone-number'
+    >;
+  };
+}
+
 export interface ApiTextToSpeachTextToSpeach extends Struct.SingleTypeSchema {
   collectionName: 'text_to_speaches';
   info: {
@@ -1379,6 +1426,7 @@ declare module '@strapi/strapi' {
       'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'api::product.product': ApiProductProduct;
       'api::sip-trunk.sip-trunk': ApiSipTrunkSipTrunk;
+      'api::solution-phone-number.solution-phone-number': ApiSolutionPhoneNumberSolutionPhoneNumber;
       'api::text-to-speach.text-to-speach': ApiTextToSpeachTextToSpeach;
       'api::voice-robot-for-inbound-call.voice-robot-for-inbound-call': ApiVoiceRobotForInboundCallVoiceRobotForInboundCall;
       'admin::permission': AdminPermission;
