@@ -511,6 +511,40 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAiContactCenterAiContactCenter
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ai_contact_centers';
+  info: {
+    singularName: 'ai-contact-center';
+    pluralName: 'ai-contact-centers';
+    displayName: 'AI Contact Center';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-contact-center.ai-contact-center'
+    >;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -733,6 +767,37 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPbxPbx extends Struct.SingleTypeSchema {
+  collectionName: 'pbxes';
+  info: {
+    singularName: 'pbx';
+    pluralName: 'pbxes';
+    displayName: 'PBX';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::pbx.pbx'>;
+  };
+}
+
 export interface ApiPhoneNumberPhoneNumber extends Struct.SingleTypeSchema {
   collectionName: 'phone_numbers';
   info: {
@@ -857,6 +922,71 @@ export interface ApiSipTrunkSipTrunk extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::sip-trunk.sip-trunk'
+    >;
+  };
+}
+
+export interface ApiTextToSpeachTextToSpeach extends Struct.SingleTypeSchema {
+  collectionName: 'text_to_speaches';
+  info: {
+    singularName: 'text-to-speach';
+    pluralName: 'text-to-speaches';
+    displayName: 'Text to Speach';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::text-to-speach.text-to-speach'
+    >;
+  };
+}
+
+export interface ApiVoiceRobotForInboundCallVoiceRobotForInboundCall
+  extends Struct.SingleTypeSchema {
+  collectionName: 'voice_robot_for_inbound_calls';
+  info: {
+    singularName: 'voice-robot-for-inbound-call';
+    pluralName: 'voice-robot-for-inbound-calls';
+    displayName: 'Voice Robot for inbound calls';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::voice-robot-for-inbound-call.voice-robot-for-inbound-call'
     >;
   };
 }
@@ -1237,16 +1367,20 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::ai-contact-center.ai-contact-center': ApiAiContactCenterAiContactCenter;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::pbx.pbx': ApiPbxPbx;
       'api::phone-number.phone-number': ApiPhoneNumberPhoneNumber;
       'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'api::product.product': ApiProductProduct;
       'api::sip-trunk.sip-trunk': ApiSipTrunkSipTrunk;
+      'api::text-to-speach.text-to-speach': ApiTextToSpeachTextToSpeach;
+      'api::voice-robot-for-inbound-call.voice-robot-for-inbound-call': ApiVoiceRobotForInboundCallVoiceRobotForInboundCall;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

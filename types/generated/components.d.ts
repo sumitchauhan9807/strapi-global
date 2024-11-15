@@ -77,6 +77,11 @@ export interface SharedProductSpecs extends Struct.ComponentSchema {
     SubHeading: Schema.Attribute.String;
     ProductSpecs: Schema.Attribute.Component<'shared.repetable-lists', true>;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
   };
 }
 

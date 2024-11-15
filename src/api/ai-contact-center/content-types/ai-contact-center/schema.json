@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_contact_centers",
+  "info": {
+    "singularName": "ai-contact-center",
+    "pluralName": "ai-contact-centers",
+    "displayName": "AI Contact Center"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-description"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-specs"
+    },
+    "DeployingSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.deploying-steps"
+    }
+  }
+}

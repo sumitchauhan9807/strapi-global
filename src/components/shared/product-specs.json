@@ -19,14 +19,25 @@
       "component": "shared.repetable-lists"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "DeployingSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.deploying-steps"
+    },
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-description"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "voice_robot_for_inbound_calls",
+  "info": {
+    "singularName": "voice-robot-for-inbound-call",
+    "pluralName": "voice-robot-for-inbound-calls",
+    "displayName": "Voice Robot for inbound calls"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-description"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-specs"
+    },
+    "DeployingSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.deploying-steps"
+    }
+  }
+}
