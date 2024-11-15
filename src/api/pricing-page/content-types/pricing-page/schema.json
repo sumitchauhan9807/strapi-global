@@ -4,7 +4,8 @@
   "info": {
     "singularName": "pricing-page",
     "pluralName": "pricing-pages",
-    "displayName": "Pricing Page"
+    "displayName": "Pricing Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +17,7 @@
     },
     "Pricing": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.pricing"
     }
   }

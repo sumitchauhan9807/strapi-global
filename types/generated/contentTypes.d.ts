@@ -773,13 +773,14 @@ export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
     singularName: 'pricing-page';
     pluralName: 'pricing-pages';
     displayName: 'Pricing Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Schema.Attribute.String;
-    Pricing: Schema.Attribute.Component<'shared.pricing', true>;
+    Pricing: Schema.Attribute.Component<'shared.pricing', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
