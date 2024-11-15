@@ -767,6 +767,34 @@ export interface ApiPhoneNumberPhoneNumber extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
+  collectionName: 'pricing_pages';
+  info: {
+    singularName: 'pricing-page';
+    pluralName: 'pricing-pages';
+    displayName: 'Pricing Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    Pricing: Schema.Attribute.Component<'shared.pricing', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pricing-page.pricing-page'
+    >;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -1215,6 +1243,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::phone-number.phone-number': ApiPhoneNumberPhoneNumber;
+      'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'api::product.product': ApiProductProduct;
       'api::sip-trunk.sip-trunk': ApiSipTrunkSipTrunk;
       'admin::permission': AdminPermission;
