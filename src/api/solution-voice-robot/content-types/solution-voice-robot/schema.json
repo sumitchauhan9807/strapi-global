@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "solution_voice_robots",
+  "info": {
+    "singularName": "solution-voice-robot",
+    "pluralName": "solution-voice-robots",
+    "displayName": "Solution Voice Robot"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TopImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "SolutionDescription": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.solution-description"
+    },
+    "SolutionsCTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.solutions-cta"
+    },
+    "WhatSolutionDO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.what-solution-do"
+    },
+    "SolutionTip": {
+      "type": "richtext"
+    },
+    "SolutionBenefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repetable-lists"
+    },
+    "HowSolutionWorks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repatable-texts"
+    }
+  }
+}

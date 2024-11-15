@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "call_recordings",
+  "info": {
+    "singularName": "call-recording",
+    "pluralName": "call-recordings",
+    "displayName": "Call Recording"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-description"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-specs"
+    },
+    "DeployingSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.deploying-steps"
+    }
+  }
+}

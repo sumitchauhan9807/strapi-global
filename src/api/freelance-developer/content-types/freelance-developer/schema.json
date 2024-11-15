@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "freelance_developers",
+  "info": {
+    "singularName": "freelance-developer",
+    "pluralName": "freelance-developers",
+    "displayName": "freelance developers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-description"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-specs"
+    },
+    "DeployingSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.deploying-steps"
+    }
+  }
+}

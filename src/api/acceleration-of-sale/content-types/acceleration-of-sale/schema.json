@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "acceleration_of_sales",
+  "info": {
+    "singularName": "acceleration-of-sale",
+    "pluralName": "acceleration-of-sales",
+    "displayName": "Acceleration of sales"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-description"
+    },
+    "ProductSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.product-specs"
+    },
+    "DeployingSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.deploying-steps"
+    }
+  }
+}

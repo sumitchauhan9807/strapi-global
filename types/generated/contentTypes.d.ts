@@ -511,6 +511,39 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAccelerationOfSaleAccelerationOfSale
+  extends Struct.SingleTypeSchema {
+  collectionName: 'acceleration_of_sales';
+  info: {
+    singularName: 'acceleration-of-sale';
+    pluralName: 'acceleration-of-sales';
+    displayName: 'Acceleration of sales';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::acceleration-of-sale.acceleration-of-sale'
+    >;
+  };
+}
+
 export interface ApiAiContactCenterAiContactCenter
   extends Struct.SingleTypeSchema {
   collectionName: 'ai_contact_centers';
@@ -610,6 +643,38 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCallRecordingCallRecording extends Struct.SingleTypeSchema {
+  collectionName: 'call_recordings';
+  info: {
+    singularName: 'call-recording';
+    pluralName: 'call-recordings';
+    displayName: 'Call Recording';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::call-recording.call-recording'
+    >;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -641,6 +706,39 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChatbotsVsNewsletterChatbotsVsNewsletter
+  extends Struct.SingleTypeSchema {
+  collectionName: 'chatbots_vs_newsletters';
+  info: {
+    singularName: 'chatbots-vs-newsletter';
+    pluralName: 'chatbots-vs-newsletters';
+    displayName: 'Chatbots VS newsletter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chatbots-vs-newsletter.chatbots-vs-newsletter'
+    >;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
@@ -668,6 +766,39 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+  };
+}
+
+export interface ApiFreelanceDeveloperFreelanceDeveloper
+  extends Struct.SingleTypeSchema {
+  collectionName: 'freelance_developers';
+  info: {
+    singularName: 'freelance-developer';
+    pluralName: 'freelance-developers';
+    displayName: 'freelance developers';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Description: Schema.Attribute.Component<
+      'shared.product-description',
+      false
+    >;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
+    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::freelance-developer.freelance-developer'
+    >;
   };
 }
 
@@ -764,6 +895,51 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
+  };
+}
+
+export interface ApiHomeOfficeHomeOffice extends Struct.SingleTypeSchema {
+  collectionName: 'home_offices';
+  info: {
+    singularName: 'home-office';
+    pluralName: 'home-offices';
+    displayName: 'Home Office';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SolutionDescription: Schema.Attribute.Component<
+      'shared.solution-description',
+      false
+    >;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    WhatSolutionDO: Schema.Attribute.Component<
+      'shared.what-solution-do',
+      false
+    >;
+    SolutionTip: Schema.Attribute.RichText;
+    SolutionBenefits: Schema.Attribute.Component<
+      'shared.repetable-lists',
+      true
+    >;
+    HowSolutionWorks: Schema.Attribute.Component<
+      'shared.repatable-texts',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-office.home-office'
+    >;
   };
 }
 
@@ -893,6 +1069,49 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiRobotControllerRobotController
+  extends Struct.SingleTypeSchema {
+  collectionName: 'robot_controllers';
+  info: {
+    singularName: 'robot-controller';
+    pluralName: 'robot-controllers';
+    displayName: 'Robot controller';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SolutionDescription: Schema.Attribute.Component<
+      'shared.solution-description',
+      false
+    >;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    WhatSolutionDO: Schema.Attribute.Component<
+      'shared.what-solution-do',
+      false
+    >;
+    SolutionTip: Schema.Attribute.RichText;
+    SolutionBenefits: Schema.Attribute.Component<
+      'shared.repetable-lists',
+      true
+    >;
+    HowSolutionWorks: Schema.Attribute.Component<'shared.text', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::robot-controller.robot-controller'
+    >;
+  };
+}
+
 export interface ApiSipTrunkSipTrunk extends Struct.SingleTypeSchema {
   collectionName: 'sip_trunks';
   info: {
@@ -969,6 +1188,52 @@ export interface ApiSolutionPhoneNumberSolutionPhoneNumber
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::solution-phone-number.solution-phone-number'
+    >;
+  };
+}
+
+export interface ApiSolutionVoiceRobotSolutionVoiceRobot
+  extends Struct.SingleTypeSchema {
+  collectionName: 'solution_voice_robots';
+  info: {
+    singularName: 'solution-voice-robot';
+    pluralName: 'solution-voice-robots';
+    displayName: 'Solution Voice Robot';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SolutionDescription: Schema.Attribute.Component<
+      'shared.solution-description',
+      false
+    >;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    WhatSolutionDO: Schema.Attribute.Component<
+      'shared.what-solution-do',
+      false
+    >;
+    SolutionTip: Schema.Attribute.RichText;
+    SolutionBenefits: Schema.Attribute.Component<
+      'shared.repetable-lists',
+      true
+    >;
+    HowSolutionWorks: Schema.Attribute.Component<
+      'shared.repatable-texts',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::solution-voice-robot.solution-voice-robot'
     >;
   };
 }
@@ -1414,19 +1679,26 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::acceleration-of-sale.acceleration-of-sale': ApiAccelerationOfSaleAccelerationOfSale;
       'api::ai-contact-center.ai-contact-center': ApiAiContactCenterAiContactCenter;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::call-recording.call-recording': ApiCallRecordingCallRecording;
       'api::category.category': ApiCategoryCategory;
+      'api::chatbots-vs-newsletter.chatbots-vs-newsletter': ApiChatbotsVsNewsletterChatbotsVsNewsletter;
       'api::footer.footer': ApiFooterFooter;
+      'api::freelance-developer.freelance-developer': ApiFreelanceDeveloperFreelanceDeveloper;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::home-office.home-office': ApiHomeOfficeHomeOffice;
       'api::pbx.pbx': ApiPbxPbx;
       'api::phone-number.phone-number': ApiPhoneNumberPhoneNumber;
       'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'api::product.product': ApiProductProduct;
+      'api::robot-controller.robot-controller': ApiRobotControllerRobotController;
       'api::sip-trunk.sip-trunk': ApiSipTrunkSipTrunk;
       'api::solution-phone-number.solution-phone-number': ApiSolutionPhoneNumberSolutionPhoneNumber;
+      'api::solution-voice-robot.solution-voice-robot': ApiSolutionVoiceRobotSolutionVoiceRobot;
       'api::text-to-speach.text-to-speach': ApiTextToSpeachTextToSpeach;
       'api::voice-robot-for-inbound-call.voice-robot-for-inbound-call': ApiVoiceRobotForInboundCallVoiceRobotForInboundCall;
       'admin::permission': AdminPermission;
