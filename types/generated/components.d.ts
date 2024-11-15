@@ -20,7 +20,7 @@ export interface SharedText extends Struct.ComponentSchema {
     description: '';
   };
   attributes: {
-    Feature: Schema.Attribute.String;
+    text: Schema.Attribute.String;
   };
 }
 

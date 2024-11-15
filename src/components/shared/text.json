@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "Feature": {
+    "text": {
       "type": "string"
     }
   }

@@ -1076,6 +1076,7 @@ export interface ApiRobotControllerRobotController
     singularName: 'robot-controller';
     pluralName: 'robot-controllers';
     displayName: 'Robot controller';
+    description: '';
   };
   options: {
     draftAndPublish: true;
