@@ -17,6 +17,9 @@
     },
     "Currency": {
       "type": "string"
+    },
+    "Price": {
+      "type": "string"
     }
   }
 }
