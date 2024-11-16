@@ -1055,6 +1055,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     singularName: 'product';
     pluralName: 'products';
     displayName: 'Product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1066,6 +1067,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         minLength: 3;
         maxLength: 71;
       }>;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
