@@ -81,6 +81,16 @@
         }
       },
       "component": "shared.home-section3"
+    },
+    "Map": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.global-dialer-map"
     }
   }
 }

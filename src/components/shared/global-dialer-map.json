@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_global_dialer_maps",
+  "info": {
+    "displayName": "Global Dialer Map",
+    "icon": "plane"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "MapData": {
+      "type": "json"
+    }
+  }
+}

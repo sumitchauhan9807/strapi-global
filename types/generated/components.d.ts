@@ -275,6 +275,20 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedGlobalDialerMap extends Struct.ComponentSchema {
+  collectionName: 'components_shared_global_dialer_maps';
+  info: {
+    displayName: 'Global Dialer Map';
+    icon: 'plane';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+    Color: Schema.Attribute.String;
+    MapData: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedDeployingSteps extends Struct.ComponentSchema {
   collectionName: 'components_shared_deploying_steps';
   info: {
@@ -311,6 +325,7 @@ declare module '@strapi/strapi' {
       'shared.home-section2': SharedHomeSection2;
       'shared.home-section1': SharedHomeSection1;
       'shared.hero': SharedHero;
+      'shared.global-dialer-map': SharedGlobalDialerMap;
       'shared.deploying-steps': SharedDeployingSteps;
     }
   }
