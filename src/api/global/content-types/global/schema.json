@@ -12,24 +12,49 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "siteName": {
-      "type": "string",
-      "required": true
-    },
-    "favicon": {
+    "LightLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "multiple": false
     },
-    "siteDescription": {
-      "type": "text",
-      "required": true
+    "DarkLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "defaultSeo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
+    "Email": {
+      "type": "email"
+    },
+    "Phonenumber": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "skype": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "xing": {
+      "type": "string"
+    },
+    "signal": {
+      "type": "string"
     }
   }
 }

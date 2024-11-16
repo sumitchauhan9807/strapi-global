@@ -814,10 +814,16 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    siteName: Schema.Attribute.String & Schema.Attribute.Required;
-    favicon: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
+    LightLogo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    DarkLogo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Email: Schema.Attribute.Email;
+    Phonenumber: Schema.Attribute.String;
+    linkedin: Schema.Attribute.String;
+    facebook: Schema.Attribute.String;
+    skype: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String;
+    xing: Schema.Attribute.String;
+    signal: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
