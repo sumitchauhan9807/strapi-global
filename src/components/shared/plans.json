@@ -20,6 +20,11 @@
     },
     "Price": {
       "type": "string"
+    },
+    "MissingFeatures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
     }
   }
 }
