@@ -18,6 +18,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.plans"
+    },
+    "Price": {
+      "type": "string"
     }
   }
 }

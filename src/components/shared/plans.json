@@ -10,9 +10,6 @@
     "Name": {
       "type": "string"
     },
-    "Price": {
-      "type": "decimal"
-    },
     "Features": {
       "type": "component",
       "repeatable": true,
