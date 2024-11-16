@@ -138,6 +138,7 @@ export interface SharedPricing extends Struct.ComponentSchema {
   info: {
     displayName: 'Pricing';
     icon: 'monitor';
+    description: '';
   };
   attributes: {
     Heading: Schema.Attribute.String;
@@ -151,11 +152,13 @@ export interface SharedPlans extends Struct.ComponentSchema {
   info: {
     displayName: 'Plans';
     icon: 'briefcase';
+    description: '';
   };
   attributes: {
     Name: Schema.Attribute.String;
     Price: Schema.Attribute.Decimal;
     Features: Schema.Attribute.Component<'shared.text', true>;
+    Currency: Schema.Attribute.String;
   };
 }
 
