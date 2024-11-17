@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "partner_pages",
+  "info": {
+    "singularName": "partner-page",
+    "pluralName": "partner-pages",
+    "displayName": "Partner Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TopImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

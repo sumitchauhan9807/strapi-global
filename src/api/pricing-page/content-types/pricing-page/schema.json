@@ -19,6 +19,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.pricing"
+    },
+    "TopImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -914,6 +914,33 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPartnerPagePartnerPage extends Struct.SingleTypeSchema {
+  collectionName: 'partner_pages';
+  info: {
+    singularName: 'partner-page';
+    pluralName: 'partner-pages';
+    displayName: 'Partner Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partner-page.partner-page'
+    >;
+  };
+}
+
 export interface ApiPbxPbx extends Struct.SingleTypeSchema {
   collectionName: 'pbxes';
   info: {
@@ -993,6 +1020,7 @@ export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     Pricing: Schema.Attribute.Component<'shared.pricing', false>;
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1691,6 +1719,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::home-office.home-office': ApiHomeOfficeHomeOffice;
       'api::partner.partner': ApiPartnerPartner;
+      'api::partner-page.partner-page': ApiPartnerPagePartnerPage;
       'api::pbx.pbx': ApiPbxPbx;
       'api::phone-number.phone-number': ApiPhoneNumberPhoneNumber;
       'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
