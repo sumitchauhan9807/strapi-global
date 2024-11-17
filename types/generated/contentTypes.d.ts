@@ -965,6 +965,7 @@ export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     Pricing: Schema.Attribute.Component<'shared.pricing', false>;
+    Map: Schema.Attribute.Component<'shared.global-dialer-map', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
