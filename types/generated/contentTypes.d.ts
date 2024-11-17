@@ -740,6 +740,34 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGlobalWorldMapGlobalWorldMap
+  extends Struct.SingleTypeSchema {
+  collectionName: 'global_world_maps';
+  info: {
+    singularName: 'global-world-map';
+    pluralName: 'global-world-maps';
+    displayName: 'Global World Map';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Map: Schema.Attribute.Component<'shared.global-dialer-map', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::global-world-map.global-world-map'
+    >;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -965,7 +993,6 @@ export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     Pricing: Schema.Attribute.Component<'shared.pricing', false>;
-    Map: Schema.Attribute.Component<'shared.global-dialer-map', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1660,6 +1687,7 @@ declare module '@strapi/strapi' {
       'api::footer.footer': ApiFooterFooter;
       'api::freelance-developer.freelance-developer': ApiFreelanceDeveloperFreelanceDeveloper;
       'api::global.global': ApiGlobalGlobal;
+      'api::global-world-map.global-world-map': ApiGlobalWorldMapGlobalWorldMap;
       'api::home.home': ApiHomeHome;
       'api::home-office.home-office': ApiHomeOfficeHomeOffice;
       'api::partner.partner': ApiPartnerPartner;

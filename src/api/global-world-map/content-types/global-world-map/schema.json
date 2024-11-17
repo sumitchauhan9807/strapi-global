@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_world_maps",
+  "info": {
+    "singularName": "global-world-map",
+    "pluralName": "global-world-maps",
+    "displayName": "Global World Map"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Map": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.global-dialer-map"
+    }
+  }
+}

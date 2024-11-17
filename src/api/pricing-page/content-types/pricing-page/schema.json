@@ -19,11 +19,6 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.pricing"
-    },
-    "Map": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.global-dialer-map"
     }
   }
 }
