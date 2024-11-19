@@ -38,10 +38,19 @@
     "instagram": {
       "type": "string"
     },
-    "twitter": {
+    "skype": {
       "type": "string"
     },
-    "github": {
+    "xing": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "signal": {
       "type": "string"
     }
   }

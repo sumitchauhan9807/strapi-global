@@ -1289,8 +1289,11 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.RichText;
     facebook: Schema.Attribute.String;
     instagram: Schema.Attribute.String;
-    twitter: Schema.Attribute.String;
-    github: Schema.Attribute.String;
+    skype: Schema.Attribute.String;
+    xing: Schema.Attribute.String;
+    linkedin: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String;
+    signal: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
