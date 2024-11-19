@@ -728,6 +728,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     whatsapp: Schema.Attribute.String;
     xing: Schema.Attribute.String;
     signal: Schema.Attribute.String;
+    instagram: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

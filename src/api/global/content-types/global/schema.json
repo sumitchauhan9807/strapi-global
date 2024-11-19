@@ -13,24 +13,26 @@
   "pluginOptions": {},
   "attributes": {
     "LightLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "DarkLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Email": {
       "type": "email"
@@ -54,6 +56,9 @@
       "type": "string"
     },
     "signal": {
+      "type": "string"
+    },
+    "instagram": {
       "type": "string"
     }
   }
