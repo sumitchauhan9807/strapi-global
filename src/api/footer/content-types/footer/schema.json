@@ -33,6 +33,9 @@
     },
     "Location4": {
       "type": "richtext"
+    },
+    "Location5": {
+      "type": "richtext"
     }
   }
 }
