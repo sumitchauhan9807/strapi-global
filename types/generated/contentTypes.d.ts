@@ -643,6 +643,34 @@ export interface ApiChatbotsVsNewsletterChatbotsVsNewsletter
   };
 }
 
+export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
+  collectionName: 'countries';
+  info: {
+    singularName: 'country';
+    pluralName: 'countries';
+    displayName: 'Country';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::country.country'
+    >;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
@@ -1713,6 +1741,7 @@ declare module '@strapi/strapi' {
       'api::ai-contact-center.ai-contact-center': ApiAiContactCenterAiContactCenter;
       'api::call-recording.call-recording': ApiCallRecordingCallRecording;
       'api::chatbots-vs-newsletter.chatbots-vs-newsletter': ApiChatbotsVsNewsletterChatbotsVsNewsletter;
+      'api::country.country': ApiCountryCountry;
       'api::footer.footer': ApiFooterFooter;
       'api::freelance-developer.freelance-developer': ApiFreelanceDeveloperFreelanceDeveloper;
       'api::global.global': ApiGlobalGlobal;
