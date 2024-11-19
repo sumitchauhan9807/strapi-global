@@ -1277,6 +1277,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     singularName: 'team';
     pluralName: 'teams';
     displayName: 'Team';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1285,6 +1286,11 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     designation: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    description: Schema.Attribute.RichText;
+    facebook: Schema.Attribute.String;
+    instagram: Schema.Attribute.String;
+    twitter: Schema.Attribute.String;
+    github: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
