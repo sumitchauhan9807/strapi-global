@@ -950,12 +950,14 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
     singularName: 'partner';
     pluralName: 'partners';
     displayName: 'Partner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
