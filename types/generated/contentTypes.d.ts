@@ -935,7 +935,14 @@ export interface ApiDatenschutzDatenschutz extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    description: Schema.Attribute.RichText;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1215,7 +1222,7 @@ export interface ApiImpressumImpressum extends Struct.SingleTypeSchema {
         'plugin::ckeditor.CKEditor',
         {
           output: 'HTML';
-          preset: 'light';
+          preset: 'rich';
         }
       >;
     createdAt: Schema.Attribute.DateTime;
