@@ -4,7 +4,8 @@
   "info": {
     "singularName": "imprint",
     "pluralName": "imprints",
-    "displayName": "Imprint"
+    "displayName": "Imprint",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "description": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
