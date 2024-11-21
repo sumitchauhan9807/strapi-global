@@ -777,12 +777,14 @@ export interface ApiGlobalWorldMapGlobalWorldMap
     singularName: 'global-world-map';
     pluralName: 'global-world-maps';
     displayName: 'Global World Map';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Map: Schema.Attribute.Component<'shared.global-dialer-map', false>;
+    MapImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "global-world-map",
     "pluralName": "global-world-maps",
-    "displayName": "Global World Map"
+    "displayName": "Global World Map",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.global-dialer-map"
+    },
+    "MapImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
