@@ -1204,12 +1204,20 @@ export interface ApiImpressumImpressum extends Struct.SingleTypeSchema {
     singularName: 'impressum';
     pluralName: 'impressums';
     displayName: 'Impressum';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    description: Schema.Attribute.RichText;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

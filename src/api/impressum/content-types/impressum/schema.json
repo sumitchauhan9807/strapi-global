@@ -4,7 +4,8 @@
   "info": {
     "singularName": "impressum",
     "pluralName": "impressums",
-    "displayName": "Impressum"
+    "displayName": "Impressum",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "description": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
