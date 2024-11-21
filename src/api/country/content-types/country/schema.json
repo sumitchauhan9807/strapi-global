@@ -4,7 +4,8 @@
   "info": {
     "singularName": "country",
     "pluralName": "countries",
-    "displayName": "Country"
+    "displayName": "Country",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,21 @@
       "type": "string"
     },
     "flag": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "IsoCode": {
+      "type": "string"
+    },
+    "CallCenters": {
+      "type": "string"
     }
   }
 }

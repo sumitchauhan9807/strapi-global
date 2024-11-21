@@ -649,6 +649,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
     singularName: 'country';
     pluralName: 'countries';
     displayName: 'Country';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -656,6 +657,8 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    IsoCode: Schema.Attribute.String;
+    CallCenters: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -784,7 +787,6 @@ export interface ApiGlobalWorldMapGlobalWorldMap
   };
   attributes: {
     Map: Schema.Attribute.Component<'shared.global-dialer-map', false>;
-    MapImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

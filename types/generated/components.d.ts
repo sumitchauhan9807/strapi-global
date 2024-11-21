@@ -1,5 +1,18 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface MapcountriesCountries extends Struct.ComponentSchema {
+  collectionName: 'components_mapcountries_countries';
+  info: {
+    displayName: 'Countries';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    IsoCode: Schema.Attribute.String;
+    Callcenters: Schema.Attribute.String;
+  };
+}
+
 export interface SharedWhatSolutionDo extends Struct.ComponentSchema {
   collectionName: 'components_shared_what_solution_dos';
   info: {
@@ -284,6 +297,7 @@ export interface SharedGlobalDialerMap extends Struct.ComponentSchema {
   info: {
     displayName: 'Global Dialer Map';
     icon: 'plane';
+    description: '';
   };
   attributes: {
     Heading: Schema.Attribute.String;
@@ -311,6 +325,7 @@ export interface SharedDeployingSteps extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'mapcountries.countries': MapcountriesCountries;
       'shared.what-solution-do': SharedWhatSolutionDo;
       'shared.text': SharedText;
       'shared.subscribe-section': SharedSubscribeSection;

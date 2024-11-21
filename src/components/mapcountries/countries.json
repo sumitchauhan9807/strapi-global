@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_mapcountries_countries",
+  "info": {
+    "displayName": "Countries",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "IsoCode": {
+      "type": "string"
+    },
+    "Callcenters": {
+      "type": "string"
+    }
+  }
+}

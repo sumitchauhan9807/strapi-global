@@ -16,16 +16,6 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.global-dialer-map"
-    },
-    "MapImage": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }
