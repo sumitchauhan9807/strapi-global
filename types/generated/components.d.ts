@@ -290,7 +290,6 @@ export interface SharedGlobalDialerMap extends Struct.ComponentSchema {
     Heading: Schema.Attribute.String;
     SubHeading: Schema.Attribute.String;
     Color: Schema.Attribute.String;
-    MapData: Schema.Attribute.JSON;
   };
 }
 

@@ -15,9 +15,6 @@
     },
     "Color": {
       "type": "string"
-    },
-    "MapData": {
-      "type": "json"
     }
   }
 }

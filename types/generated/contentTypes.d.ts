@@ -659,6 +659,8 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
     flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     IsoCode: Schema.Attribute.String;
     CallCenters: Schema.Attribute.String;
+    Color: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
