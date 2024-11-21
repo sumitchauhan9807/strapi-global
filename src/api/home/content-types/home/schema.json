@@ -82,7 +82,7 @@
       },
       "component": "shared.home-section3"
     },
-    "CountupItem": {
+    "Countup": {
       "displayName": "Count Up",
       "type": "component",
       "repeatable": true,

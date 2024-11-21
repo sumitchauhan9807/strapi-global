@@ -1142,7 +1142,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    CountupItem: Schema.Attribute.Component<'shared.count-up', true> &
+    Countup: Schema.Attribute.Component<'shared.count-up', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
