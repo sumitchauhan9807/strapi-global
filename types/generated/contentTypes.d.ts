@@ -923,6 +923,34 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDatenschutzDatenschutz extends Struct.SingleTypeSchema {
+  collectionName: 'datenschutzs';
+  info: {
+    singularName: 'datenschutz';
+    pluralName: 'datenschutzs';
+    displayName: 'Datenschutz';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::datenschutz.datenschutz'
+    >;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
@@ -1166,6 +1194,33 @@ export interface ApiHomeOfficeHomeOffice extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-office.home-office'
+    >;
+  };
+}
+
+export interface ApiImpressumImpressum extends Struct.SingleTypeSchema {
+  collectionName: 'impressums';
+  info: {
+    singularName: 'impressum';
+    pluralName: 'impressums';
+    displayName: 'Impressum';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::impressum.impressum'
     >;
   };
 }
@@ -2089,12 +2144,14 @@ declare module '@strapi/strapi' {
       'api::call-recording.call-recording': ApiCallRecordingCallRecording;
       'api::chatbots-vs-newsletter.chatbots-vs-newsletter': ApiChatbotsVsNewsletterChatbotsVsNewsletter;
       'api::country.country': ApiCountryCountry;
+      'api::datenschutz.datenschutz': ApiDatenschutzDatenschutz;
       'api::footer.footer': ApiFooterFooter;
       'api::freelance-developer.freelance-developer': ApiFreelanceDeveloperFreelanceDeveloper;
       'api::global.global': ApiGlobalGlobal;
       'api::global-world-map.global-world-map': ApiGlobalWorldMapGlobalWorldMap;
       'api::home.home': ApiHomeHome;
       'api::home-office.home-office': ApiHomeOfficeHomeOffice;
+      'api::impressum.impressum': ApiImpressumImpressum;
       'api::imprint.imprint': ApiImprintImprint;
       'api::partner.partner': ApiPartnerPartner;
       'api::partner-page.partner-page': ApiPartnerPagePartnerPage;
