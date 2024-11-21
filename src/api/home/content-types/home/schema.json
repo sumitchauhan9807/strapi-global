@@ -82,15 +82,16 @@
       },
       "component": "shared.home-section3"
     },
-    "Map": {
+    "CountupItem": {
+      "displayName": "Count Up",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.global-dialer-map"
+      "component": "shared.count-up"
     }
   }
 }

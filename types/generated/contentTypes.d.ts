@@ -1142,7 +1142,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    Map: Schema.Attribute.Component<'shared.global-dialer-map', false> &
+    CountupItem: Schema.Attribute.Component<'shared.count-up', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

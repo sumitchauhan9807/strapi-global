@@ -308,6 +308,20 @@ export interface SharedDeployingSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCountUp extends Struct.ComponentSchema {
+  collectionName: 'components_shared_count_ups';
+  info: {
+    displayName: 'Count Up';
+    icon: 'cog';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    value: Schema.Attribute.BigInteger;
+    duration: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<10>;
+  };
+}
+
 export interface MapcountriesCountries extends Struct.ComponentSchema {
   collectionName: 'components_mapcountries_countries';
   info: {
@@ -344,6 +358,7 @@ declare module '@strapi/strapi' {
       'shared.hero': SharedHero;
       'shared.global-dialer-map': SharedGlobalDialerMap;
       'shared.deploying-steps': SharedDeployingSteps;
+      'shared.count-up': SharedCountUp;
       'mapcountries.countries': MapcountriesCountries;
     }
   }
