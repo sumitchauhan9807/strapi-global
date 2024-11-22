@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "Contact Us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Lists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    },
+    "FormInfo": {
+      "displayName": "Form Info",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.form-info"
+    }
+  }
+}
