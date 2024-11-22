@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_forms",
+  "info": {
+    "displayName": "Form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.form-info"
+    },
+    "Purpose": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    }
+  }
+}

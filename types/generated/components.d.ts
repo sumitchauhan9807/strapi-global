@@ -293,6 +293,18 @@ export interface SharedGlobalDialerMap extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedForm extends Struct.ComponentSchema {
+  collectionName: 'components_shared_forms';
+  info: {
+    displayName: 'Form';
+    description: '';
+  };
+  attributes: {
+    info: Schema.Attribute.Component<'shared.form-info', true>;
+    Purpose: Schema.Attribute.Component<'shared.text', true>;
+  };
+}
+
 export interface SharedFormInfo extends Struct.ComponentSchema {
   collectionName: 'components_shared_form_infos';
   info: {
@@ -370,6 +382,7 @@ declare module '@strapi/strapi' {
       'shared.home-section1': SharedHomeSection1;
       'shared.hero': SharedHero;
       'shared.global-dialer-map': SharedGlobalDialerMap;
+      'shared.form': SharedForm;
       'shared.form-info': SharedFormInfo;
       'shared.deploying-steps': SharedDeployingSteps;
       'shared.count-up': SharedCountUp;

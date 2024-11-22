@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact-us",
     "pluralName": "contact-uses",
-    "displayName": "Contact Us"
+    "displayName": "Contact Us",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,11 +23,10 @@
       "repeatable": true,
       "component": "shared.text"
     },
-    "FormInfo": {
-      "displayName": "Form Info",
+    "Form": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.form-info"
+      "repeatable": false,
+      "component": "shared.form"
     }
   }
 }

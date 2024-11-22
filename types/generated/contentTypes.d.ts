@@ -649,6 +649,7 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     singularName: 'contact-us';
     pluralName: 'contact-uses';
     displayName: 'Contact Us';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -657,7 +658,7 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     Heading: Schema.Attribute.String;
     SubHeading: Schema.Attribute.String;
     Lists: Schema.Attribute.Component<'shared.text', true>;
-    FormInfo: Schema.Attribute.Component<'shared.form-info', true>;
+    Form: Schema.Attribute.Component<'shared.form', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
