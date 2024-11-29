@@ -14,7 +14,7 @@ module.exports = {
     try {
       const axios = require('axios')
       console.log(ctx.request,"reqq")
-\      console.log(ctx.request.body,"ctxx")
+      console.log(ctx.request.body,"ctxx")
       validateSendMail(ctx.request.body)
       let requestBody = ctx.request.body
       let { data } = await axios({
