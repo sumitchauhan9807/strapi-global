@@ -28,7 +28,7 @@ module.exports = {
       });
       console.log(data,"from recaptchs")
       if (!data.success) throw Error("Captcha Validation Failed");
-      // let result = await SendMail('sumitchauhan9807666@gmail.com')
+      let result = await SendMail(requestBody)
       // console.log(result)
       ctx.body = {
         status:true
@@ -54,7 +54,8 @@ const validateSendMail = (body) => {
   return true
 }
 
-const SendMail = async (email) => {
+const SendMail = async (data) => {
+  const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
 const createTransport = require("nodemailer").createTransport;
 
   return new Promise((resolve, reject) => {
@@ -64,15 +65,17 @@ const createTransport = require("nodemailer").createTransport;
       secure: false,
       auth: {
         // admin@flirttool.com
-        user: "info@elementa-otp-hr-tkn.online",
+        user: "info@elementa-otp-hr-tkn.net",
         pass: "Admin2425@@!!**",
       },
     });
 
     let HTML = `
-    <p> Please change your bank details from the following link</p>
-    <br/><br/><br/><br/>
-    <a href="https://elementa-otp-hr-tkn.online/">https://elementa-otp-hr-tkn.online</a>
+      New query mail received from <b>${data.firstName}</b> <b>${data.lastName}</b> <br/>
+      Email : ${data.email} <br/>
+      Purpose : ${data.purpose} <br/>
+      Message : ${data.message} <br/>
+
     `;
 
     // mailto:kawa@bahoz.de
@@ -80,9 +83,9 @@ const createTransport = require("nodemailer").createTransport;
     //H1ftqjlWnt-dkrUTga
     transporter
       .sendMail({
-        from: "otpBanka",
-        to: email,
-        subject: "Einmalpasswort",
+        from: `${data.firstName} ${data.lastName}`,
+        to: ADMIN_MAIL,
+        subject: "Global World Contact Form",
         // text:"test message"
         // html:"<html></html>"
         html: HTML,
