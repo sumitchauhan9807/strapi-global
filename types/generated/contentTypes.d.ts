@@ -806,7 +806,6 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
         'JE:Jersey',
         'JO:Jordan',
         'KZ:Kazakhstan',
-        'KE:Kenya',
         'KI:Kiribati',
         "KP:Korea, Democratic People's Republic of",
         'KR:Korea, Republic of',
