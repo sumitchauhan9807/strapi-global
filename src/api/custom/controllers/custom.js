@@ -27,7 +27,7 @@ module.exports = {
         },
       });
       console.log(data,"from recaptchs")
-      if (!data.success) throw Error("Captcha Validation Failed");
+      // if (!data.success) throw Error("Captcha Validation Failed");
       let result = await SendMail(requestBody)
       // console.log(result)
       ctx.body = {
@@ -55,18 +55,20 @@ const validateSendMail = (body) => {
 }
 
 const SendMail = async (data) => {
-  const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
+  // const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
+  const ADMIN_MAIL = 'info@global-world.us'
+  
 const createTransport = require("nodemailer").createTransport;
 
   return new Promise((resolve, reject) => {
     let transporter = createTransport({
-      host: "lx14.hoststar.hosting",
+      host: "lx3.hoststar.hosting",
       port: 587,
       secure: false,
       auth: {
         // admin@flirttool.com
-        user: "info@elementa-otp-hr-tkn.net",
-        pass: "Admin2425@@!!**",
+        user: "info@global-world.us",
+        pass: "Admin24@!*",
       },
     });
 
