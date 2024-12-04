@@ -49,14 +49,16 @@ const validateSendMail = (body) => {
   if(!body.firstName) throw Error('Firstname is required')
   if(!body.lastName) throw Error('Lastname is required')
   if(!body.email) throw Error('Email is required')
+  if(!body.phonenumber) throw Error('phonenumber is required')
+  if(!body.company) throw Error('company is required')
   if(!body.purpose) throw Error('Purpose is required')
   if(!body.message) throw Error('Message is required')
   return true
 }
 
 const SendMail = async (data) => {
-  // const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
-  const ADMIN_MAIL = 'info@global-world.us'
+  const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
+  // const ADMIN_MAIL = 'info@global-world.us`'
   
 const createTransport = require("nodemailer").createTransport;
 
@@ -74,7 +76,9 @@ const createTransport = require("nodemailer").createTransport;
 
     let HTML = `
       New query mail received from <b>${data.firstName}</b> <b>${data.lastName}</b> <br/>
+      Company : ${data.company} <br/>
       Email : ${data.email} <br/>
+      Phonenumber : ${data.phonenumber} <br/>
       Purpose : ${data.purpose} <br/>
       Message : ${data.message} <br/>
 
