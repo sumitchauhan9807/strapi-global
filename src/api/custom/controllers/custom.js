@@ -57,8 +57,8 @@ const validateSendMail = (body) => {
 }
 
 const SendMail = async (data) => {
-  const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
-  // const ADMIN_MAIL = 'info@global-world.us`'
+  // const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
+  const ADMIN_MAIL = 'info@global-world.us`'
   
 const createTransport = require("nodemailer").createTransport;
 
