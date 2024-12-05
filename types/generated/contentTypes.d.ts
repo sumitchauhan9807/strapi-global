@@ -518,17 +518,41 @@ export interface ApiAccelerationOfSaleAccelerationOfSale
     singularName: 'acceleration-of-sale';
     pluralName: 'acceleration-of-sales';
     displayName: 'Acceleration of sales';
+    description: '';
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
