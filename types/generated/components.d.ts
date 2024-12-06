@@ -1,18 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface MapcountriesCountries extends Struct.ComponentSchema {
-  collectionName: 'components_mapcountries_countries';
-  info: {
-    displayName: 'Countries';
-    icon: 'clock';
-    description: '';
-  };
-  attributes: {
-    IsoCode: Schema.Attribute.String;
-    Callcenters: Schema.Attribute.String;
-  };
-}
-
 export interface SharedWhatSolutionDo extends Struct.ComponentSchema {
   collectionName: 'components_shared_what_solution_dos';
   info: {
@@ -315,6 +302,8 @@ export interface SharedForm extends Struct.ComponentSchema {
   attributes: {
     info: Schema.Attribute.Component<'shared.form-info', true>;
     Purpose: Schema.Attribute.Component<'shared.text', true>;
+    Declaration: Schema.Attribute.RichText;
+    PrivacyPolicy: Schema.Attribute.RichText;
   };
 }
 
@@ -360,10 +349,22 @@ export interface SharedCountUp extends Struct.ComponentSchema {
   };
 }
 
+export interface MapcountriesCountries extends Struct.ComponentSchema {
+  collectionName: 'components_mapcountries_countries';
+  info: {
+    displayName: 'Countries';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    IsoCode: Schema.Attribute.String;
+    Callcenters: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'mapcountries.countries': MapcountriesCountries;
       'shared.what-solution-do': SharedWhatSolutionDo;
       'shared.text': SharedText;
       'shared.subscribe-section': SharedSubscribeSection;
@@ -387,6 +388,7 @@ declare module '@strapi/strapi' {
       'shared.form-info': SharedFormInfo;
       'shared.deploying-steps': SharedDeployingSteps;
       'shared.count-up': SharedCountUp;
+      'mapcountries.countries': MapcountriesCountries;
     }
   }
 }
