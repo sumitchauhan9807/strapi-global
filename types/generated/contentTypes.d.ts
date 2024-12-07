@@ -683,6 +683,7 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     SubHeading: Schema.Attribute.String;
     Lists: Schema.Attribute.Component<'shared.text', true>;
     Form: Schema.Attribute.Component<'shared.form', false>;
+    ContactLists: Schema.Attribute.Component<'shared.contact-lists', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

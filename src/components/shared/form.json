@@ -21,6 +21,12 @@
     },
     "PrivacyPolicy": {
       "type": "richtext"
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "text"
     }
   }
 }

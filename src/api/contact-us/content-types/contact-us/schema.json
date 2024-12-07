@@ -27,6 +27,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.form"
+    },
+    "ContactLists": {
+      "displayName": "ContactLists",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact-lists"
     }
   }
 }

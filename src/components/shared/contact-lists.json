@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_contact_lists",
+  "info": {
+    "displayName": "ContactLists",
+    "icon": "exit",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Lists": {
+      "displayName": "Lists",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.lists"
+    }
+  }
+}

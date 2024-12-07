@@ -213,6 +213,18 @@ export interface SharedMobileNumbers extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLists extends Struct.ComponentSchema {
+  collectionName: 'components_shared_lists';
+  info: {
+    displayName: 'Lists';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Heading: Schema.Attribute.String;
+    Number: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHomeSection3 extends Struct.ComponentSchema {
   collectionName: 'components_shared_home_section3s';
   info: {
@@ -304,6 +316,8 @@ export interface SharedForm extends Struct.ComponentSchema {
     Purpose: Schema.Attribute.Component<'shared.text', true>;
     Declaration: Schema.Attribute.RichText;
     PrivacyPolicy: Schema.Attribute.RichText;
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.Text;
   };
 }
 
@@ -349,6 +363,20 @@ export interface SharedCountUp extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContactLists extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_lists';
+  info: {
+    displayName: 'ContactLists';
+    icon: 'exit';
+    description: '';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+    Lists: Schema.Attribute.Component<'shared.lists', true>;
+  };
+}
+
 export interface MapcountriesCountries extends Struct.ComponentSchema {
   collectionName: 'components_mapcountries_countries';
   info: {
@@ -379,6 +407,7 @@ declare module '@strapi/strapi' {
       'shared.plans': SharedPlans;
       'shared.number': SharedNumber;
       'shared.mobile-numbers': SharedMobileNumbers;
+      'shared.lists': SharedLists;
       'shared.home-section3': SharedHomeSection3;
       'shared.home-section2': SharedHomeSection2;
       'shared.home-section1': SharedHomeSection1;
@@ -388,6 +417,7 @@ declare module '@strapi/strapi' {
       'shared.form-info': SharedFormInfo;
       'shared.deploying-steps': SharedDeployingSteps;
       'shared.count-up': SharedCountUp;
+      'shared.contact-lists': SharedContactLists;
       'mapcountries.countries': MapcountriesCountries;
     }
   }
