@@ -318,6 +318,7 @@ export interface SharedForm extends Struct.ComponentSchema {
     PrivacyPolicy: Schema.Attribute.RichText;
     Heading: Schema.Attribute.String;
     SubHeading: Schema.Attribute.Text;
+    FormFields: Schema.Attribute.Component<'shared.form-fields', false>;
   };
 }
 
@@ -331,6 +332,23 @@ export interface SharedFormInfo extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     description: Schema.Attribute.RichText;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedFormFields extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_fields';
+  info: {
+    displayName: 'Form Fields';
+    icon: 'code';
+  };
+  attributes: {
+    Purpose: Schema.Attribute.String;
+    Company: Schema.Attribute.String;
+    FirstName: Schema.Attribute.String;
+    LastName: Schema.Attribute.String;
+    Email: Schema.Attribute.String;
+    Phone: Schema.Attribute.String;
+    Message: Schema.Attribute.String;
   };
 }
 
@@ -415,6 +433,7 @@ declare module '@strapi/strapi' {
       'shared.global-dialer-map': SharedGlobalDialerMap;
       'shared.form': SharedForm;
       'shared.form-info': SharedFormInfo;
+      'shared.form-fields': SharedFormFields;
       'shared.deploying-steps': SharedDeployingSteps;
       'shared.count-up': SharedCountUp;
       'shared.contact-lists': SharedContactLists;

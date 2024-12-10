@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_form_fields",
+  "info": {
+    "displayName": "Form Fields",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "Purpose": {
+      "type": "string"
+    },
+    "Company": {
+      "type": "string"
+    },
+    "FirstName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "string"
+    }
+  }
+}

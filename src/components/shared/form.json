@@ -27,6 +27,12 @@
     },
     "SubHeading": {
       "type": "text"
+    },
+    "FormFields": {
+      "displayName": "Form Fields",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.form-fields"
     }
   }
 }
