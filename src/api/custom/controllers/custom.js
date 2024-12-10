@@ -50,6 +50,7 @@ const validateSendMail = (body) => {
   if(!body.lastName) throw Error('Lastname is required')
   if(!body.email) throw Error('Email is required')
   if(!body.phonenumber) throw Error('phonenumber is required')
+  if(!body.phoneFix) throw Error('phoneFix is required')
   if(!body.company) throw Error('company is required')
   if(!body.purpose) throw Error('Purpose is required')
   if(!body.message) throw Error('Message is required')
@@ -79,6 +80,7 @@ const createTransport = require("nodemailer").createTransport;
       Company : ${data.company} <br/>
       Email : ${data.email} <br/>
       Phonenumber : ${data.phonenumber} <br/>
+      phoneFix : ${data.phoneFix} <br/>
       Purpose : ${data.purpose} <br/>
       Message : ${data.message} <br/>
 
