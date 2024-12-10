@@ -340,6 +340,7 @@ export interface SharedFormFields extends Struct.ComponentSchema {
   info: {
     displayName: 'Form Fields';
     icon: 'code';
+    description: '';
   };
   attributes: {
     Purpose: Schema.Attribute.String;
@@ -349,6 +350,7 @@ export interface SharedFormFields extends Struct.ComponentSchema {
     Email: Schema.Attribute.String;
     Phone: Schema.Attribute.String;
     Message: Schema.Attribute.String;
+    PhoneFix: Schema.Attribute.String;
   };
 }
 
