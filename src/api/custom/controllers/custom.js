@@ -27,7 +27,7 @@ module.exports = {
         },
       });
       console.log(data,"from recaptchs")
-      // if (!data.success) throw Error("Captcha Validation Failed");
+      if (!data.success) throw Error("Captcha Validation Failed");
       let result = await SendMail(requestBody)
       // console.log(result)
       ctx.body = {
