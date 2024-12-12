@@ -12,6 +12,7 @@ module.exports = {
     }
   },
   sendMail: async (ctx, next) => {
+    const captcha_secret = '6LcznZkqAAAAAPHFbBBgEwBqlMCsEOkPw_leyAlb'
     try {
       const axios = require('axios')
       console.log(ctx.request,"reqq")
@@ -22,10 +23,11 @@ module.exports = {
         url: "https://www.google.com/recaptcha/api/siteverify",
         method: "POST",
         params: {
-          secret: "6LeajJkqAAAAALvt8kdb_gQlZq8zI_kLoqYmiJPU", // it should be dynamic
+          secret: captcha_secret, // it should be dynamic
           response: requestBody.recaptcha,
         },
       });
+      console.log(captcha_secret,"captcha_secret")
       console.log(data,"from recaptchs")
       if (!data.success) throw Error("Captcha Validation Failed");
       let result = await SendMail(requestBody)
