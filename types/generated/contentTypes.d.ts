@@ -1153,7 +1153,7 @@ export interface ApiGoogleMapGoogleMap extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    GoogleMaps: Schema.Attribute.Component<'shared.google-maps', true>;
+    GoogleMaps: Schema.Attribute.Component<'shared.google-maps', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

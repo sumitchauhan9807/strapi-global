@@ -15,7 +15,7 @@
     "GoogleMaps": {
       "displayName": "Google Maps",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.google-maps"
     }
   }
