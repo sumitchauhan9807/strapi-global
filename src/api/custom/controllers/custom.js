@@ -19,17 +19,17 @@ module.exports = {
       console.log(ctx.request.body,"ctxx")
       validateSendMail(ctx.request.body)
       let requestBody = ctx.request.body
-      // let { data } = await axios({
-      //   url: "https://www.google.com/recaptcha/api/siteverify",
-      //   method: "POST",
-      //   params: {
-      //     secret: captcha_secret, // it should be dynamic
-      //     response: requestBody.recaptcha,
-      //   },
-      // });
-      // console.log(captcha_secret,"captcha_secret")
-      // console.log(data,"from recaptchs")
-      // if (!data.success) throw Error("Captcha Validation Failed");
+      let { data } = await axios({
+        url: "https://www.google.com/recaptcha/api/siteverify",
+        method: "POST",
+        params: {
+          secret: captcha_secret, // it should be dynamic
+          response: requestBody.recaptcha,
+        },
+      });
+      console.log(captcha_secret,"captcha_secret")
+      console.log(data,"from recaptchs")
+      if (!data.success) throw Error("Captcha Validation Failed");
       let result = await SendMail(requestBody)
       // console.log(result)
       ctx.body = {
