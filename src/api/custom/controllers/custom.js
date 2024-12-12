@@ -64,10 +64,12 @@ const SendMail = async (data) => {
 const createTransport = require("nodemailer").createTransport;
 
   return new Promise((resolve, reject) => {
+    
     let transporter = createTransport({
       host: "lx3.hoststar.hosting",
       port: 587,
       secure: false,
+      // secureConnection: true,
       auth: {
         // admin@flirttool.com
         user: "info@global-world.us",
