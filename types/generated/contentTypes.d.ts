@@ -1141,6 +1141,34 @@ export interface ApiGlobalWorldMapGlobalWorldMap
   };
 }
 
+export interface ApiGoogleMapGoogleMap extends Struct.CollectionTypeSchema {
+  collectionName: 'google_maps';
+  info: {
+    singularName: 'google-map';
+    pluralName: 'google-maps';
+    displayName: 'Google Maps';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    GoogleMaps: Schema.Attribute.Component<'shared.google-maps', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::google-map.google-map'
+    >;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -2271,6 +2299,7 @@ declare module '@strapi/strapi' {
       'api::freelance-developer.freelance-developer': ApiFreelanceDeveloperFreelanceDeveloper;
       'api::global.global': ApiGlobalGlobal;
       'api::global-world-map.global-world-map': ApiGlobalWorldMapGlobalWorldMap;
+      'api::google-map.google-map': ApiGoogleMapGoogleMap;
       'api::home.home': ApiHomeHome;
       'api::home-office.home-office': ApiHomeOfficeHomeOffice;
       'api::impressum.impressum': ApiImpressumImpressum;

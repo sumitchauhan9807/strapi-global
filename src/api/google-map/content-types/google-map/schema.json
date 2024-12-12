@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "google_maps",
+  "info": {
+    "singularName": "google-map",
+    "pluralName": "google-maps",
+    "displayName": "Google Maps",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "GoogleMaps": {
+      "displayName": "Google Maps",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.google-maps"
+    }
+  }
+}

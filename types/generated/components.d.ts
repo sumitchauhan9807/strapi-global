@@ -294,6 +294,20 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedGoogleMaps extends Struct.ComponentSchema {
+  collectionName: 'components_shared_google_maps';
+  info: {
+    displayName: 'Google Maps';
+    icon: 'code';
+  };
+  attributes: {
+    Latitude: Schema.Attribute.String;
+    Longitude: Schema.Attribute.String;
+    Address: Schema.Attribute.Text;
+    Description: Schema.Attribute.RichText;
+  };
+}
+
 export interface SharedGlobalDialerMap extends Struct.ComponentSchema {
   collectionName: 'components_shared_global_dialer_maps';
   info: {
@@ -435,6 +449,7 @@ declare module '@strapi/strapi' {
       'shared.home-section2': SharedHomeSection2;
       'shared.home-section1': SharedHomeSection1;
       'shared.hero': SharedHero;
+      'shared.google-maps': SharedGoogleMaps;
       'shared.global-dialer-map': SharedGlobalDialerMap;
       'shared.form': SharedForm;
       'shared.form-info': SharedFormInfo;
