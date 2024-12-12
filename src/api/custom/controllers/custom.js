@@ -22,7 +22,7 @@ module.exports = {
         url: "https://www.google.com/recaptcha/api/siteverify",
         method: "POST",
         params: {
-          secret: "6Lf9uJgqAAAAAFN5-4E3y455OVoBN9meo9-W_S8V", // it should be dynamic
+          secret: "6LeajJkqAAAAALvt8kdb_gQlZq8zI_kLoqYmiJPU", // it should be dynamic
           response: requestBody.recaptcha,
         },
       });
