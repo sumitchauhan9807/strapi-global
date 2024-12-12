@@ -19,17 +19,17 @@ module.exports = {
       console.log(ctx.request.body,"ctxx")
       validateSendMail(ctx.request.body)
       let requestBody = ctx.request.body
-      let { data } = await axios({
-        url: "https://www.google.com/recaptcha/api/siteverify",
-        method: "POST",
-        params: {
-          secret: captcha_secret, // it should be dynamic
-          response: requestBody.recaptcha,
-        },
-      });
-      console.log(captcha_secret,"captcha_secret")
-      console.log(data,"from recaptchs")
-      if (!data.success) throw Error("Captcha Validation Failed");
+      // let { data } = await axios({
+      //   url: "https://www.google.com/recaptcha/api/siteverify",
+      //   method: "POST",
+      //   params: {
+      //     secret: captcha_secret, // it should be dynamic
+      //     response: requestBody.recaptcha,
+      //   },
+      // });
+      // console.log(captcha_secret,"captcha_secret")
+      // console.log(data,"from recaptchs")
+      // if (!data.success) throw Error("Captcha Validation Failed");
       let result = await SendMail(requestBody)
       // console.log(result)
       ctx.body = {
@@ -61,21 +61,29 @@ const validateSendMail = (body) => {
 
 const SendMail = async (data) => {
   // const ADMIN_MAIL = 'sumitchauhan9807666@gmail.com'
-  const ADMIN_MAIL = 'info@global-world.us`'
+  const ADMIN_MAIL = 'info@global-world.us'
   
 const createTransport = require("nodemailer").createTransport;
+  let host = "lx3.hoststar.hosting" 
+  let user = "info@global-world.us"
+  let password = 'Admin2425@@!!**..'
+
+  console.log(host)
+  console.log(user)
+  console.log(password)
+
 
   return new Promise((resolve, reject) => {
     
     let transporter = createTransport({
-      host: "lx3.hoststar.hosting",
+      host: host,
       port: 587,
       secure: false,
       // secureConnection: true,
       auth: {
         // admin@flirttool.com
-        user: "info@global-world.us",
-        pass: "Admin2425@@!!**..",
+        user: user,
+        pass: password,
       },
     });
 
