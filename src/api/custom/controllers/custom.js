@@ -71,7 +71,7 @@ const createTransport = require("nodemailer").createTransport;
       auth: {
         // admin@flirttool.com
         user: "info@global-world.us",
-        pass: "Admin24@!*",
+        pass: "Admin2425@@!!**..",
       },
     });
 
