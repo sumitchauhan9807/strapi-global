@@ -963,6 +963,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
         'ZW:Zimbabwe',
       ]
     >;
+    CountryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

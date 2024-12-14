@@ -281,6 +281,9 @@
         "ZM:Zambia",
         "ZW:Zimbabwe"
       ]
+    },
+    "CountryCode": {
+      "type": "string"
     }
   }
 }
