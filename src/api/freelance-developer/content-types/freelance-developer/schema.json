@@ -4,27 +4,47 @@
   "info": {
     "singularName": "freelance-developer",
     "pluralName": "freelance-developers",
-    "displayName": "freelance developers"
+    "displayName": "freelance developers",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "Description": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.product-description"
+      "component": "shared.product-description",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "ProductSpecs": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.product-specs"
+      "component": "shared.product-specs",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "DeployingSteps": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.deploying-steps"
+      "component": "shared.deploying-steps",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

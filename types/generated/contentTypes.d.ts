@@ -575,18 +575,47 @@ export interface ApiAiContactCenterAiContactCenter
     singularName: 'ai-contact-center';
     pluralName: 'ai-contact-centers';
     displayName: 'AI Contact Center';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -608,17 +637,41 @@ export interface ApiCallRecordingCallRecording extends Struct.SingleTypeSchema {
     singularName: 'call-recording';
     pluralName: 'call-recordings';
     displayName: 'Call Recording';
+    description: '';
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -641,17 +694,41 @@ export interface ApiChatbotsVsNewsletterChatbotsVsNewsletter
     singularName: 'chatbots-vs-newsletter';
     pluralName: 'chatbots-vs-newsletters';
     displayName: 'Chatbots VS newsletter';
+    description: '';
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -678,12 +755,42 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    Heading: Schema.Attribute.String;
-    SubHeading: Schema.Attribute.String;
-    Lists: Schema.Attribute.Component<'shared.text', true>;
-    Form: Schema.Attribute.Component<'shared.form', false>;
-    ContactLists: Schema.Attribute.Component<'shared.contact-lists', false>;
+    Heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SubHeading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Lists: Schema.Attribute.Component<'shared.text', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Form: Schema.Attribute.Component<'shared.form', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ContactLists: Schema.Attribute.Component<'shared.contact-lists', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -990,6 +1097,11 @@ export interface ApiDatenschutzDatenschutz extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     description: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
@@ -1025,14 +1137,54 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    WorkingHours: Schema.Attribute.Component<'shared.repetable-lists', true>;
-    Location1: Schema.Attribute.RichText;
-    Location2: Schema.Attribute.RichText;
-    Location3: Schema.Attribute.RichText;
-    MobileNumbers: Schema.Attribute.Component<'shared.mobile-numbers', false>;
-    Location4: Schema.Attribute.RichText;
-    Location5: Schema.Attribute.RichText;
+    WorkingHours: Schema.Attribute.Component<'shared.repetable-lists', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Location1: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Location2: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Location3: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    MobileNumbers: Schema.Attribute.Component<'shared.mobile-numbers', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Location4: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Location5: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1052,17 +1204,41 @@ export interface ApiFreelanceDeveloperFreelanceDeveloper
     singularName: 'freelance-developer';
     pluralName: 'freelance-developers';
     displayName: 'freelance developers';
+    description: '';
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1125,8 +1301,18 @@ export interface ApiGlobalWorldMapGlobalWorldMap
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    Map: Schema.Attribute.Component<'shared.global-dialer-map', false>;
+    Map: Schema.Attribute.Component<'shared.global-dialer-map', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1250,30 +1436,71 @@ export interface ApiHomeOfficeHomeOffice extends Struct.SingleTypeSchema {
     singularName: 'home-office';
     pluralName: 'home-offices';
     displayName: 'Home Office';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionDescription: Schema.Attribute.Component<
       'shared.solution-description',
       false
-    >;
-    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     WhatSolutionDO: Schema.Attribute.Component<
       'shared.what-solution-do',
       false
-    >;
-    SolutionTip: Schema.Attribute.RichText;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionTip: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionBenefits: Schema.Attribute.Component<
       'shared.repetable-lists',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     HowSolutionWorks: Schema.Attribute.Component<
       'shared.repatable-texts',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1299,6 +1526,11 @@ export interface ApiImpressumImpressum extends Struct.SingleTypeSchema {
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     description: Schema.Attribute.RichText &
@@ -1334,6 +1566,11 @@ export interface ApiImprintImprint extends Struct.SingleTypeSchema {
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     description: Schema.Attribute.RichText &
@@ -1426,14 +1663,42 @@ export interface ApiPbxPbx extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1457,14 +1722,42 @@ export interface ApiPhoneNumberPhoneNumber extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1491,10 +1784,30 @@ export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Schema.Attribute.String;
-    Pricing: Schema.Attribute.Component<'shared.pricing', false>;
-    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Pricing: Schema.Attribute.Component<'shared.pricing', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1520,6 +1833,11 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     description: Schema.Attribute.RichText &
@@ -1556,15 +1874,35 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 3;
         maxLength: 71;
       }>;
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1592,23 +1930,63 @@ export interface ApiRobotControllerRobotController
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionDescription: Schema.Attribute.Component<
       'shared.solution-description',
       false
-    >;
-    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     WhatSolutionDO: Schema.Attribute.Component<
       'shared.what-solution-do',
       false
-    >;
-    SolutionTip: Schema.Attribute.RichText;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionTip: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionBenefits: Schema.Attribute.Component<
       'shared.repetable-lists',
       true
-    >;
-    HowSolutionWorks: Schema.Attribute.Component<'shared.text', true>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    HowSolutionWorks: Schema.Attribute.Component<'shared.text', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1630,18 +2008,47 @@ export interface ApiSipTrunkSipTrunk extends Struct.SingleTypeSchema {
     singularName: 'sip-trunk';
     pluralName: 'sip-trunks';
     displayName: 'SIP Trunk';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1669,26 +2076,66 @@ export interface ApiSolutionPhoneNumberSolutionPhoneNumber
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionDescription: Schema.Attribute.Component<
       'shared.solution-description',
       false
-    >;
-    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     WhatSolutionDO: Schema.Attribute.Component<
       'shared.what-solution-do',
       false
-    >;
-    SolutionTip: Schema.Attribute.RichText;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionTip: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionBenefits: Schema.Attribute.Component<
       'shared.repetable-lists',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     HowSolutionWorks: Schema.Attribute.Component<
       'shared.repatable-texts',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1711,30 +2158,71 @@ export interface ApiSolutionVoiceRobotSolutionVoiceRobot
     singularName: 'solution-voice-robot';
     pluralName: 'solution-voice-robots';
     displayName: 'Solution Voice Robot';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionDescription: Schema.Attribute.Component<
       'shared.solution-description',
       false
-    >;
-    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionsCTA: Schema.Attribute.Component<'shared.solutions-cta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     WhatSolutionDO: Schema.Attribute.Component<
       'shared.what-solution-do',
       false
-    >;
-    SolutionTip: Schema.Attribute.RichText;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    SolutionTip: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SolutionBenefits: Schema.Attribute.Component<
       'shared.repetable-lists',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     HowSolutionWorks: Schema.Attribute.Component<
       'shared.repatable-texts',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1824,6 +2312,11 @@ export interface ApiTermsAndConditionTermsAndCondition
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     description: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
@@ -1854,17 +2347,41 @@ export interface ApiTextToSpeachTextToSpeach extends Struct.SingleTypeSchema {
     singularName: 'text-to-speach';
     pluralName: 'text-to-speaches';
     displayName: 'Text to Speach';
+    description: '';
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1887,17 +2404,41 @@ export interface ApiVoiceRobotForInboundCallVoiceRobotForInboundCall
     singularName: 'voice-robot-for-inbound-call';
     pluralName: 'voice-robot-for-inbound-calls';
     displayName: 'Voice Robot for inbound calls';
+    description: '';
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     Description: Schema.Attribute.Component<
       'shared.product-description',
       false
-    >;
-    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false>;
-    DeployingSteps: Schema.Attribute.Component<'shared.deploying-steps', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ProductSpecs: Schema.Attribute.Component<'shared.product-specs', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    DeployingSteps: Schema.Attribute.Component<
+      'shared.deploying-steps',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

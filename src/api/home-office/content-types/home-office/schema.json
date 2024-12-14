@@ -4,50 +4,91 @@
   "info": {
     "singularName": "home-office",
     "pluralName": "home-offices",
-    "displayName": "Home Office"
+    "displayName": "Home Office",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "TopImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "SolutionDescription": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.solution-description"
+      "component": "shared.solution-description",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "SolutionsCTA": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.solutions-cta"
+      "component": "shared.solutions-cta",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "WhatSolutionDO": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.what-solution-do"
+      "component": "shared.what-solution-do",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "SolutionTip": {
-      "type": "richtext"
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "SolutionBenefits": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.repetable-lists"
+      "component": "shared.repetable-lists",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "HowSolutionWorks": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.repatable-texts"
+      "component": "shared.repatable-texts",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
