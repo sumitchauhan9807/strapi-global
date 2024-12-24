@@ -806,6 +806,33 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCountriesPageCountriesPage extends Struct.SingleTypeSchema {
+  collectionName: 'countries_pages';
+  info: {
+    singularName: 'countries-page';
+    pluralName: 'countries-pages';
+    displayName: 'Countries Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::countries-page.countries-page'
+    >;
+  };
+}
+
 export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   collectionName: 'countries';
   info: {
@@ -2835,6 +2862,7 @@ declare module '@strapi/strapi' {
       'api::call-recording.call-recording': ApiCallRecordingCallRecording;
       'api::chatbots-vs-newsletter.chatbots-vs-newsletter': ApiChatbotsVsNewsletterChatbotsVsNewsletter;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::countries-page.countries-page': ApiCountriesPageCountriesPage;
       'api::country.country': ApiCountryCountry;
       'api::datenschutz.datenschutz': ApiDatenschutzDatenschutz;
       'api::footer.footer': ApiFooterFooter;

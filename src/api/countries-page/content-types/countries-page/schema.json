@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "countries_pages",
+  "info": {
+    "singularName": "countries-page",
+    "pluralName": "countries-pages",
+    "displayName": "Countries Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TopImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
