@@ -2435,8 +2435,18 @@ export interface ApiTranslationTranslation extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    Navigation: Schema.Attribute.Component<'shared.navigation', false>;
+    Navigation: Schema.Attribute.Component<'shared.navigation', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
