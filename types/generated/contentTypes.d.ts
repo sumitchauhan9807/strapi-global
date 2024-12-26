@@ -2424,6 +2424,34 @@ export interface ApiTextToSpeachTextToSpeach extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiTranslationTranslation extends Struct.SingleTypeSchema {
+  collectionName: 'translations';
+  info: {
+    singularName: 'translation';
+    pluralName: 'translations';
+    displayName: 'Translations';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Navigation: Schema.Attribute.Component<'shared.navigation', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::translation.translation'
+    >;
+  };
+}
+
 export interface ApiVoiceRobotForInboundCallVoiceRobotForInboundCall
   extends Struct.SingleTypeSchema {
   collectionName: 'voice_robot_for_inbound_calls';
@@ -2889,6 +2917,7 @@ declare module '@strapi/strapi' {
       'api::team-page.team-page': ApiTeamPageTeamPage;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'api::text-to-speach.text-to-speach': ApiTextToSpeachTextToSpeach;
+      'api::translation.translation': ApiTranslationTranslation;
       'api::voice-robot-for-inbound-call.voice-robot-for-inbound-call': ApiVoiceRobotForInboundCallVoiceRobotForInboundCall;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;

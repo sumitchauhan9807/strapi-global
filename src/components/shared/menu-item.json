@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_menu_items",
+  "info": {
+    "displayName": "Menu Item",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "dropdown"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "SubMenu": {
+      "displayName": "SubMenu",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.sub-menu"
+    }
+  }
+}

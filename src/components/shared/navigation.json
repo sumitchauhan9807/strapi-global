@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_navigations",
+  "info": {
+    "displayName": "Navigation",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "MenuItem": {
+      "displayName": "Menu Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-item"
+    }
+  }
+}

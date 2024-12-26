@@ -1,18 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface MapcountriesCountries extends Struct.ComponentSchema {
-  collectionName: 'components_mapcountries_countries';
-  info: {
-    displayName: 'Countries';
-    icon: 'clock';
-    description: '';
-  };
-  attributes: {
-    IsoCode: Schema.Attribute.String;
-    Callcenters: Schema.Attribute.String;
-  };
-}
-
 export interface SharedWhatSolutionDo extends Struct.ComponentSchema {
   collectionName: 'components_shared_what_solution_dos';
   info: {
@@ -48,6 +35,20 @@ export interface SharedSubscribeSection extends Struct.ComponentSchema {
     SubText: Schema.Attribute.Text;
     FootText: Schema.Attribute.Text;
     ButtonText: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSubMenu extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sub_menus';
+  info: {
+    displayName: 'SubMenu';
+    icon: 'collapse';
+    description: '';
+  };
+  attributes: {
+    Name: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
+    Link: Schema.Attribute.String;
   };
 }
 
@@ -214,6 +215,18 @@ export interface SharedNumber extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedNavigation extends Struct.ComponentSchema {
+  collectionName: 'components_shared_navigations';
+  info: {
+    displayName: 'Navigation';
+    icon: 'book';
+    description: '';
+  };
+  attributes: {
+    MenuItem: Schema.Attribute.Component<'shared.menu-item', true>;
+  };
+}
+
 export interface SharedMobileNumbers extends Struct.ComponentSchema {
   collectionName: 'components_shared_mobile_numbers';
   info: {
@@ -223,6 +236,21 @@ export interface SharedMobileNumbers extends Struct.ComponentSchema {
   };
   attributes: {
     Number: Schema.Attribute.Component<'shared.number', true>;
+  };
+}
+
+export interface SharedMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_menu_items';
+  info: {
+    displayName: 'Menu Item';
+    icon: 'briefcase';
+    description: '';
+  };
+  attributes: {
+    Type: Schema.Attribute.Enumeration<['single', 'dropdown']>;
+    Name: Schema.Attribute.String;
+    Link: Schema.Attribute.String;
+    SubMenu: Schema.Attribute.Component<'shared.sub-menu', true>;
   };
 }
 
@@ -427,13 +455,26 @@ export interface SharedContactLists extends Struct.ComponentSchema {
   };
 }
 
+export interface MapcountriesCountries extends Struct.ComponentSchema {
+  collectionName: 'components_mapcountries_countries';
+  info: {
+    displayName: 'Countries';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    IsoCode: Schema.Attribute.String;
+    Callcenters: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'mapcountries.countries': MapcountriesCountries;
       'shared.what-solution-do': SharedWhatSolutionDo;
       'shared.text': SharedText;
       'shared.subscribe-section': SharedSubscribeSection;
+      'shared.sub-menu': SharedSubMenu;
       'shared.solutions-cta': SharedSolutionsCta;
       'shared.solution-description': SharedSolutionDescription;
       'shared.seo': SharedSeo;
@@ -444,7 +485,9 @@ declare module '@strapi/strapi' {
       'shared.pricing': SharedPricing;
       'shared.plans': SharedPlans;
       'shared.number': SharedNumber;
+      'shared.navigation': SharedNavigation;
       'shared.mobile-numbers': SharedMobileNumbers;
+      'shared.menu-item': SharedMenuItem;
       'shared.lists': SharedLists;
       'shared.home-section3': SharedHomeSection3;
       'shared.home-section2': SharedHomeSection2;
@@ -458,6 +501,7 @@ declare module '@strapi/strapi' {
       'shared.deploying-steps': SharedDeployingSteps;
       'shared.count-up': SharedCountUp;
       'shared.contact-lists': SharedContactLists;
+      'mapcountries.countries': MapcountriesCountries;
     }
   }
 }
