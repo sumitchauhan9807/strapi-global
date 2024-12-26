@@ -812,6 +812,7 @@ export interface ApiCountriesPageCountriesPage extends Struct.SingleTypeSchema {
     singularName: 'countries-page';
     pluralName: 'countries-pages';
     displayName: 'Countries Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1658,12 +1659,14 @@ export interface ApiPartnerPagePartnerPage extends Struct.SingleTypeSchema {
     singularName: 'partner-page';
     pluralName: 'partner-pages';
     displayName: 'Partner Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Heading: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -2306,12 +2309,15 @@ export interface ApiTeamPageTeamPage extends Struct.SingleTypeSchema {
     singularName: 'team-page';
     pluralName: 'team-pages';
     displayName: 'Team Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     TopImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

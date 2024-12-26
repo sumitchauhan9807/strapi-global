@@ -4,7 +4,8 @@
   "info": {
     "singularName": "team-page",
     "pluralName": "team-pages",
-    "displayName": "Team Page"
+    "displayName": "Team Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "TopImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "countries-page",
     "pluralName": "countries-pages",
-    "displayName": "Countries Page"
+    "displayName": "Countries Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "TopImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
