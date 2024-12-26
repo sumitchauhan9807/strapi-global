@@ -1305,6 +1305,8 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     xing: Schema.Attribute.String;
     signal: Schema.Attribute.String;
     instagram: Schema.Attribute.String;
+    TopMenuPhone1: Schema.Attribute.String;
+    TopMenuPhone2: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -2567,6 +2569,12 @@ export interface ApiTranslationTranslation extends Struct.SingleTypeSchema {
         };
       }>;
     Location: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    TopMenu: Schema.Attribute.Component<'shared.top-menu', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

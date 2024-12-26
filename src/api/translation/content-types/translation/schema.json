@@ -58,6 +58,17 @@
         }
       },
       "type": "string"
+    },
+    "TopMenu": {
+      "displayName": "TopMenu",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.top-menu"
     }
   }
 }

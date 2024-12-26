@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_top_menus",
+  "info": {
+    "displayName": "TopMenu",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

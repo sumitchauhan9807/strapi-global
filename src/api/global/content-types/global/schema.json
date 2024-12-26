@@ -60,6 +60,12 @@
     },
     "instagram": {
       "type": "string"
+    },
+    "TopMenuPhone1": {
+      "type": "string"
+    },
+    "TopMenuPhone2": {
+      "type": "string"
     }
   }
 }

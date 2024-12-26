@@ -12,6 +12,18 @@ export interface SharedWhatSolutionDo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTopMenu extends Struct.ComponentSchema {
+  collectionName: 'components_shared_top_menus';
+  info: {
+    displayName: 'TopMenu';
+    icon: 'clock';
+  };
+  attributes: {
+    Name: Schema.Attribute.String;
+    Link: Schema.Attribute.String;
+  };
+}
+
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
@@ -475,6 +487,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.what-solution-do': SharedWhatSolutionDo;
+      'shared.top-menu': SharedTopMenu;
       'shared.text': SharedText;
       'shared.subscribe-section': SharedSubscribeSection;
       'shared.sub-menu': SharedSubMenu;
