@@ -2453,6 +2453,12 @@ export interface ApiTranslationTranslation extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    CountriesSearchPlaceholder: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
