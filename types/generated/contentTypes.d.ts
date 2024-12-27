@@ -1099,6 +1099,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
       ]
     >;
     CountryCode: Schema.Attribute.String;
+    DIDNumbers: Schema.Attribute.Component<'shared.text', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -284,6 +284,11 @@
     },
     "CountryCode": {
       "type": "string"
+    },
+    "DIDNumbers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
     }
   }
 }
