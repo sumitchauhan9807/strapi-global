@@ -1,5 +1,18 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface MapcountriesCountries extends Struct.ComponentSchema {
+  collectionName: 'components_mapcountries_countries';
+  info: {
+    displayName: 'Countries';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    IsoCode: Schema.Attribute.String;
+    Callcenters: Schema.Attribute.String;
+  };
+}
+
 export interface SharedWhatSolutionDo extends Struct.ComponentSchema {
   collectionName: 'components_shared_what_solution_dos';
   info: {
@@ -470,22 +483,10 @@ export interface SharedContactLists extends Struct.ComponentSchema {
   };
 }
 
-export interface MapcountriesCountries extends Struct.ComponentSchema {
-  collectionName: 'components_mapcountries_countries';
-  info: {
-    displayName: 'Countries';
-    icon: 'clock';
-    description: '';
-  };
-  attributes: {
-    IsoCode: Schema.Attribute.String;
-    Callcenters: Schema.Attribute.String;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'mapcountries.countries': MapcountriesCountries;
       'shared.what-solution-do': SharedWhatSolutionDo;
       'shared.top-menu': SharedTopMenu;
       'shared.text': SharedText;
@@ -517,7 +518,6 @@ declare module '@strapi/strapi' {
       'shared.deploying-steps': SharedDeployingSteps;
       'shared.count-up': SharedCountUp;
       'shared.contact-lists': SharedContactLists;
-      'mapcountries.countries': MapcountriesCountries;
     }
   }
 }

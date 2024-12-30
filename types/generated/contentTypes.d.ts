@@ -1621,7 +1621,7 @@ export interface ApiImprintImprint extends Struct.SingleTypeSchema {
         'plugin::ckeditor.CKEditor',
         {
           output: 'HTML';
-          preset: 'rich';
+          preset: 'light';
         }
       >;
     createdAt: Schema.Attribute.DateTime;
@@ -2630,6 +2630,12 @@ export interface ApiTranslationTranslation extends Struct.SingleTypeSchema {
         };
       }>;
     CopyRight: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Success: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
