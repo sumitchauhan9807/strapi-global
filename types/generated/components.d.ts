@@ -432,6 +432,7 @@ export interface SharedDomainSpecificData extends Struct.ComponentSchema {
   info: {
     displayName: 'Domain Specific Data';
     icon: 'shield';
+    description: '';
   };
   attributes: {
     domain: Schema.Attribute.String;
@@ -439,6 +440,7 @@ export interface SharedDomainSpecificData extends Struct.ComponentSchema {
     Phonenumber: Schema.Attribute.String;
     Phonenumber2: Schema.Attribute.String;
     Whatsapp: Schema.Attribute.String;
+    Signal: Schema.Attribute.String;
   };
 }
 
