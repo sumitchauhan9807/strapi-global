@@ -1320,6 +1320,10 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     instagram: Schema.Attribute.String;
     TopMenuPhone1: Schema.Attribute.String;
     TopMenuPhone2: Schema.Attribute.String;
+    DomainSpecificData: Schema.Attribute.Component<
+      'shared.domain-specific-data',
+      true
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_domain_specific_data",
+  "info": {
+    "displayName": "Domain Specific Data",
+    "icon": "shield"
+  },
+  "options": {},
+  "attributes": {
+    "domain": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phonenumber": {
+      "type": "string"
+    },
+    "Phonenumber2": {
+      "type": "string"
+    },
+    "Whatsapp": {
+      "type": "string"
+    }
+  }
+}

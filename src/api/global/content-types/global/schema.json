@@ -66,6 +66,12 @@
     },
     "TopMenuPhone2": {
       "type": "string"
+    },
+    "DomainSpecificData": {
+      "displayName": "Domain Specific Data",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.domain-specific-data"
     }
   }
 }
