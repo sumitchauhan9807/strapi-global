@@ -1635,7 +1635,7 @@ export interface ApiImprintImprint extends Struct.SingleTypeSchema {
         'plugin::ckeditor.CKEditor',
         {
           output: 'HTML';
-          preset: 'light';
+          preset: 'rich';
         }
       > &
       Schema.Attribute.SetPluginOptions<{
